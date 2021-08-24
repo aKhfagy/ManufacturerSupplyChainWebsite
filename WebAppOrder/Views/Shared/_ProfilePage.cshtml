@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portal</title>
+    <script src="~/Views/Shared/js/HeaderMenuJS.js">
+    </script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="~/Views/Shared/style/ProfilePageStyleSheet.css"/>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header" data-position="fixed" id="header">
+            <h3 id="companyName">صناعتنا</h3>
+            <button type="button" id="menuBtn">
+                <img src="~/Views/Shared/res/icons/menu.svg" 
+                     alt="Open menu" />
+            </button>
+    
+            <div id="menu">
+                <hr>
+                <p>Main Page</p>
+                <hr>
+                <p>Store</p>
+                <hr>
+                <p>Contact Us</p>
+                <hr>
+                <p>About Us</p>
+                <hr>
+                <p>Your Account</p>            
+                <hr>
+                <p>Logout</p>
+                <hr>
+            </div>
+        </div>
+        
+        <div data-role="main" class="ui-content">
+            <div id="documents">
+                <p>Documents</p>
+                <div id="documentsList">
+                    <p>Offers</p>
+                    <hr>
+                    <p>Orders</p>
+                    <hr>
+                    <p>Bills</p>
+                </div>
+            </div>
+    
+            <div id="detailsAndAccountSecurity">
+                <p>Details <a href="" alt="Edit account link">edit</a></p>
+                <hr>
+                <p id="accountDisplayName">Name</p>
+                <p id="accountDisplayEmail">Email</p>
+                <p id="accountDisplayPhoneNumber">Phone Number</p>
+                <br>
+                <p>Account Security</p>
+                <hr>
+                <a href="" alt="Edit account security settings">Edit Security Settings</a>
+            </div>
+        </div>
+    
+        <div data-role="footer" id="footer">
+            <p>Useful Link</p>
+            <a href="" alt="Home Page">Main Page</a>
+            <br>
+            <a href="" alt="Home Page">About Us</a>
+            <br>
+            <a href="" alt="Home Page">Products</a>
+            <br>
+            <a href="" alt="Home Page">Services</a>
+            <br>
+            <a href="" alt="Home Page">Legal</a>
+            <br>
+    
+            <p>Who are we?</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec hendrerit blandit dolor vel convallis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris vitae ipsum in magna posuere pellentesque.
+                Maecenas nec libero a elit aliquet porta.
+                Mauris dictum imperdiet mi, in dictum orci eleifend in.
+                Nam tristique ipsum eget congue.
+            </p>
+    
+            <img class="icon" src="~/Views/Shared/res/icons/Instagram.svg"
+                 alt="Open our Instagram account" />
+            <img class="icon" src="~/Views/Shared/res/icons/linkedin.svg"
+                 alt="Open our LinkedIn account" />
+            <img class="icon" src="~/Views/Shared/res/icons/twitter.svg"
+                 alt="Open our Twitter account" />
+            <img class="icon" src="~/Views/Shared/res/icons/facebook-f.svg"
+                 alt="Open our FaceBook account" />
+            <p id="ourEmail">xyz@xyz.com</p>
+            <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
+        </div>
+    </div>
+</body>
+</html>
