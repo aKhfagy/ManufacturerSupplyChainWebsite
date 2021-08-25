@@ -6,21 +6,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portal</title>
-    <script>
-        window.addEventListener('load', () => {
-
-            const menuBtn = document.getElementById("menuBtn");
-            const menu = document.getElementById("menu");
-
-
-            menuBtn.addEventListener('click', function () {
-                (menu.style.display === 'block') ?
-                    menu.style.display = 'none' :
-                    menu.style.display = 'block';
-            });
-
-        });
-    </script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -29,33 +14,11 @@
             background: #d6d2cc;
         }
 
-        #header {
-            background-color: #F5F5F5;
-            font-size: 30px;
-        }
-
         .icon {
             height: 15px;
             width: 15px;
             padding-top: 20px;
             padding-right: 5px;
-        }
-
-        #menu {
-            margin-top: 50px;
-            padding: 50px;
-            display: none;
-            font-size: 15px;
-            text-align: center;
-        }
-
-        #menuBtn {
-            float: left;
-            margin: 20px;
-        }
-
-        #UsefulLinksFooter {
-            padding: 20px;
         }
 
         #documents {
