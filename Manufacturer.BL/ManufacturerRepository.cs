@@ -21,7 +21,7 @@ namespace Manufacturer.BL
         {
             ManufacturerModel manufacturer =
                 ((ManufacturerModel)(from objManufacturer in objManufacturerEntities.ManufacturerProfiles
-                 select new ManufacturerModel() { ID = OrderID }));
+                                     select new ManufacturerModel() { ID = OrderID }));
             return manufacturer;
         }
     }

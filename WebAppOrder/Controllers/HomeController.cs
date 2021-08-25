@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Order.BL;
 using Order.IBL;
+using Manufacturer.IBL;
 using Order.Model;
 
 namespace WebAppOrder.Controllers
@@ -45,6 +46,11 @@ namespace WebAppOrder.Controllers
             return RedirectToAction(actionName: "Index");
         }
 
+
+    }
+
+    public class ProfileController : Controller
+    {
 
     }
 }

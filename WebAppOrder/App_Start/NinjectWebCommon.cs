@@ -3,8 +3,6 @@
 
 namespace WebAppOrder.App_Start
 {
-    using Order.IBL;
-    using Order.BL;
     using System;
     using System.Web;
 
@@ -63,7 +61,6 @@ namespace WebAppOrder.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IOrderRepository>().To<OrderRepository>().InRequestScope();
         }        
     }
 }

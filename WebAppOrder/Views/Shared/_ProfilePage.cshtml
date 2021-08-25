@@ -1,4 +1,5 @@
-﻿﻿
+﻿@using WebAppOrder.Controllers
+@model WebAppOrder.Controllers.ProfileController
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -38,9 +39,9 @@
             width: stretch;
         }
 
-        #documentslist > p {
-            padding: 10px;
-        }
+            #documentslist > p {
+                padding: 10px;
+            }
 
         .topnav {
             overflow: hidden;
@@ -49,24 +50,24 @@
             text-align: center;
         }
 
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
 
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
 
-        .topnav a.active {
-            background-color: #04AA6D;
-            color: white;
-        }
+                .topnav a.active {
+                    background-color: #04AA6D;
+                    color: white;
+                }
 
         [data-role=page] {
             height: 100% !important;
@@ -86,15 +87,15 @@
     @RenderBody()
     <div data-role="page">
 
-            <div class="topnav">
-                    <a id="companyName">صناعتنا</a>
-                    <a>Main Page</a>
-                    <a>Store</a>
-                    <a>Contact Us</a>
-                    <a>About Us</a>
-                    <a>Your Account</a>
-                    <a>Logout</a>
-            </div>
+        <div class="topnav">
+            <a id="companyName">صناعتنا</a>
+            <a>Main Page</a>
+            <a>Store</a>
+            <a>Contact Us</a>
+            <a>About Us</a>
+            <a>Your Account</a>
+            <a>Logout</a>
+        </div>
 
         <div data-role="main" class="ui-content">
             <div id="documents">
