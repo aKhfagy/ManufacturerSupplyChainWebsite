@@ -10,14 +10,14 @@
             <PropertyRef Name="CompanyID" />
           </Key>
           <Property Name="CompanyID" Type="int" Nullable="false" />
-          <Property Name="Company_Name" Type="nchar" MaxLength="10" />
-          <Property Name="ItemID" Type="int" />
-          <Property Name="Item_Name" Type="nchar" MaxLength="10" />
-          <Property Name="Item_Quantity" Type="float" />
-          <Property Name="Pick_Up_Date" Type="nchar" MaxLength="10" />
-          <Property Name="Purchase_Price" Type="float" />
+          <Property Name="Company_Name" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ItemID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Item_Name" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Item_Quantity" Type="float" Nullable="false" />
+          <Property Name="Pick_Up_Date" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Purchaise_Price" Type="float" Nullable="false" />
           <Property Name="Shipping_instructions" Type="nchar" MaxLength="10" />
-          <Property Name="Recurring_Order" Type="nchar" MaxLength="10" />
+          <Property Name="Recurring_Order" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityContainer Name="OrdersModelStoreContainer">
           <EntitySet Name="Requsets" EntityType="Self.Requsets" Schema="dbo" store:Type="Tables" />
@@ -32,14 +32,14 @@
             <PropertyRef Name="CompanyID" />
           </Key>
           <Property Name="CompanyID" Type="Int32" Nullable="false" />
-          <Property Name="Company_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="ItemID" Type="Int32" />
-          <Property Name="Item_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Item_Quantity" Type="Double" />
-          <Property Name="Pick_Up_Date" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Purchase_Price" Type="Double" />
+          <Property Name="Company_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ItemID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Item_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Item_Quantity" Type="Double" Nullable="false" />
+          <Property Name="Pick_Up_Date" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Purchaise_Price" Type="Double" Nullable="false" />
           <Property Name="Shipping_instructions" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Recurring_Order" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Recurring_Order" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityContainer Name="OrdersEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Requsets" EntityType="Self.Requset" />
@@ -59,7 +59,7 @@
                 <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
                 <ScalarProperty Name="Item_Quantity" ColumnName="Item_Quantity" />
                 <ScalarProperty Name="Pick_Up_Date" ColumnName="Pick_Up_Date" />
-                <ScalarProperty Name="Purchase_Price" ColumnName="Purchase_Price" />
+                <ScalarProperty Name="Purchaise_Price" ColumnName="Purchaise_Price" />
                 <ScalarProperty Name="Shipping_instructions" ColumnName="Shipping_instructions" />
                 <ScalarProperty Name="Recurring_Order" ColumnName="Recurring_Order" />
               </MappingFragment>

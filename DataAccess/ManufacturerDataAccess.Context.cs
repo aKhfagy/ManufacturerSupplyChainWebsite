@@ -13,18 +13,18 @@ namespace DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OrdersEntities : DbContext
+    public partial class ManufacturerEntities : DbContext
     {
-        public OrdersEntities()
-            : base("name=OrdersEntities")
+        public ManufacturerEntities()
+            : base("name=ManufacturerEntities")
         {
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Requset>().ToTable("Requset");
+            throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Requset> Requsets { get; set; }
+        public virtual DbSet<ManufacturerProfile> ManufacturerProfiles { get; set; }
     }
 }

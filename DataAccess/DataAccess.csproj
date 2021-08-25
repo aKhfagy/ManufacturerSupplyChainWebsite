@@ -68,6 +68,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataAcessModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ManufacturerDataAccess.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManufacturerDataAccess.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturerDataAccess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManufacturerDataAccess.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturerDataAccess.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturerProfile.cs">
+      <DependentUpon>ManufacturerDataAccess.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requset.cs">
       <DependentUpon>DataAcessModel.tt</DependentUpon>
@@ -82,6 +100,13 @@
     <None Include="DataAcessModel.edmx.diagram">
       <DependentUpon>DataAcessModel.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="ManufacturerDataAccess.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ManufacturerDataAccess.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ManufacturerDataAccess.edmx.diagram">
+      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +119,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataAcessModel.edmx</DependentUpon>
       <LastGenOutput>DataAcessModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="ManufacturerDataAccess.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
+      <LastGenOutput>ManufacturerDataAccess.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ManufacturerDataAccess.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
+      <LastGenOutput>ManufacturerDataAccess.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

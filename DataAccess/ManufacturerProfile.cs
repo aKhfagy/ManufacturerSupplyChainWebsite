@@ -12,16 +12,14 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Requset
+    public partial class ManufacturerProfile
     {
-        public int CompanyID { get; set; }
-        public string Company_Name { get; set; }
-        public int ItemID { get; set; }
-        public string Item_Name { get; set; }
-        public double Item_Quantity { get; set; }
-        public string Pick_Up_Date { get; set; }
-        public double Purchase_Price { get; set; }
-        public string Shipping_instructions { get; set; }
-        public string Recurring_Order { get; set; }
+        public int ID { get; set; }
+        public byte[] Image { get; set; }
+        public string Description { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public int NumberOfProducts { get; set; }
     }
 }
