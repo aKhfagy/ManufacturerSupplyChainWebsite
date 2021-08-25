@@ -41,12 +41,6 @@
             padding-right: 5px;
         }
 
-        #companyName {
-            float: right;
-            right: 0;
-            margin: 20px;
-        }
-
         #menu {
             margin-top: 50px;
             padding: 50px;
@@ -81,70 +75,63 @@
             width: stretch;
         }
 
-            #documentsList > p {
-                padding: 10px;
-            }
+        #documentslist > p {
+            padding: 10px;
+        }
 
         .topnav {
             overflow: hidden;
             background-color: #333;
+            padding: 20px;
+            text-align: center;
         }
 
-            .topnav a {
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-            }
-
-                .topnav a:hover {
-                    background-color: #ddd;
-                    color: black;
-                }
-
-                .topnav a.active {
-                    background-color: #04AA6D;
-                    color: white;
-                }
-
-        footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: red;
-            color: white;
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
             text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        [data-role=page] {
+            height: 100% !important;
+            position: relative !important;
+        }
+
+        [data-role=footer] {
+            bottom: 0;
+            padding: 20px;
+            position: absolute !important;
+            top: auto !important;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     @RenderBody()
     <div data-role="page">
-        <div data-role="header" data-position="fixed" id="header">
-            <h3 id="companyName">صناعتنا</h3>
-            <button type="button" id="menuBtn">
-                <object type="image/svg+xml" data="~/Views/Shared/res/icons/menu.svg"> </object>
-            </button>
 
-            <div id="menu">
-                <hr>
-                <p>Main Page</p>
-                <hr>
-                <p>Store</p>
-                <hr>
-                <p>Contact Us</p>
-                <hr>
-                <p>About Us</p>
-                <hr>
-                <p>Your Account</p>
-                <hr>
-                <p>Logout</p>
-                <hr>
+            <div class="topnav">
+                    <a id="companyName">صناعتنا</a>
+                    <a>Main Page</a>
+                    <a>Store</a>
+                    <a>Contact Us</a>
+                    <a>About Us</a>
+                    <a>Your Account</a>
+                    <a>Logout</a>
             </div>
-        </div>
 
         <div data-role="main" class="ui-content">
             <div id="documents">
@@ -172,17 +159,6 @@
         </div>
 
         <div data-role="footer" id="footer">
-            <p>Useful Link</p>
-            <a href="" alt="Home Page">Main Page</a>
-            <br>
-            <a href="" alt="Home Page">About Us</a>
-            <br>
-            <a href="" alt="Home Page">Products</a>
-            <br>
-            <a href="" alt="Home Page">Services</a>
-            <br>
-            <a href="" alt="Home Page">Legal</a>
-            <br>
 
             <p>Who are we?</p>
             <p>

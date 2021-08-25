@@ -110,13 +110,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <None Include="Views\Shared\_ProfilePage.cshtml" />
-    <Content Include="Views\Shared\js\HeaderMenuJS.js" />
     <Content Include="Views\Shared\res\icons\facebook-f.svg" />
     <Content Include="Views\Shared\res\icons\Instagram.svg" />
     <Content Include="Views\Shared\res\icons\linkedin.svg" />
     <Content Include="Views\Shared\res\icons\menu.svg" />
     <Content Include="Views\Shared\res\icons\twitter.svg" />
-    <Content Include="Views\Shared\style\ProfilePageStyleSheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
