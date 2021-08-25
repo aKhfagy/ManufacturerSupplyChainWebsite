@@ -53,21 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAcessModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataAcessModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAcessModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataAcessModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAcessModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataAcessModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="ManufacturerDataAccess.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,20 +71,28 @@
     <Compile Include="ManufacturerProfile.cs">
       <DependentUpon>ManufacturerDataAccess.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderDataAccessModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataAccessModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDataAccessModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataAccessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDataAccessModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requset.cs">
-      <DependentUpon>DataAcessModel.tt</DependentUpon>
+      <DependentUpon>OrderDataAccessModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DataAcessModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataAcessModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DataAcessModel.edmx.diagram">
-      <DependentUpon>DataAcessModel.edmx</DependentUpon>
-    </None>
     <EntityDeploy Include="ManufacturerDataAccess.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ManufacturerDataAccess.Designer.cs</LastGenOutput>
@@ -107,19 +100,16 @@
     <None Include="ManufacturerDataAccess.edmx.diagram">
       <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="OrderDataAccessModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OrderDataAccessModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="OrderDataAccessModel.edmx.diagram">
+      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataAcessModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataAcessModel.edmx</DependentUpon>
-      <LastGenOutput>DataAcessModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DataAcessModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataAcessModel.edmx</DependentUpon>
-      <LastGenOutput>DataAcessModel.cs</LastGenOutput>
-    </Content>
     <Content Include="ManufacturerDataAccess.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
@@ -129,6 +119,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
       <LastGenOutput>ManufacturerDataAccess.cs</LastGenOutput>
+    </Content>
+    <Content Include="OrderDataAccessModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
+      <LastGenOutput>OrderDataAccessModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="OrderDataAccessModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
+      <LastGenOutput>OrderDataAccessModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

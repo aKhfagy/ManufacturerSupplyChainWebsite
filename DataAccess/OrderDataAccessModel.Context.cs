@@ -22,7 +22,7 @@ namespace DataAccess
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Requset>().ToTable("Requset");
+            throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<Requset> Requsets { get; set; }
