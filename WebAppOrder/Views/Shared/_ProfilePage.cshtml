@@ -1,26 +1,134 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portal</title>
-    <script src="~/Views/Shared/js/HeaderMenuJS.js">
+    <script>
+        window.addEventListener('load', () => {
+
+            const menuBtn = document.getElementById("menuBtn");
+            const menu = document.getElementById("menu");
+
+
+            menuBtn.addEventListener('click', function () {
+                (menu.style.display === 'block') ?
+                    menu.style.display = 'none' :
+                    menu.style.display = 'block';
+            });
+
+        });
     </script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="~/Views/Shared/style/ProfilePageStyleSheet.css"/>
+    <style>
+        body {
+            background: #d6d2cc;
+        }
+
+        #header {
+            background-color: #F5F5F5;
+            font-size: 30px;
+        }
+
+        .icon {
+            height: 15px;
+            width: 15px;
+            padding-top: 20px;
+            padding-right: 5px;
+        }
+
+        #companyName {
+            float: right;
+            right: 0;
+            margin: 20px;
+        }
+
+        #menu {
+            margin-top: 50px;
+            padding: 50px;
+            display: none;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        #menuBtn {
+            float: left;
+            margin: 20px;
+        }
+
+        #UsefulLinksFooter {
+            padding: 20px;
+        }
+
+        #documents {
+            float: left;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #detailsAndAccountSecurity {
+            float: right;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #documentsList {
+            background: #FFFFFF;
+            width: stretch;
+        }
+
+            #documentsList > p {
+                padding: 10px;
+            }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #04AA6D;
+                    color: white;
+                }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    @RenderBody()
     <div data-role="page">
         <div data-role="header" data-position="fixed" id="header">
             <h3 id="companyName">صناعتنا</h3>
             <button type="button" id="menuBtn">
-                <img src="~/Views/Shared/res/icons/menu.svg" 
-                     alt="Open menu" />
+                <object type="image/svg+xml" data="~/Views/Shared/res/icons/menu.svg"> </object>
             </button>
-    
+
             <div id="menu">
                 <hr>
                 <p>Main Page</p>
@@ -31,13 +139,13 @@
                 <hr>
                 <p>About Us</p>
                 <hr>
-                <p>Your Account</p>            
+                <p>Your Account</p>
                 <hr>
                 <p>Logout</p>
                 <hr>
             </div>
         </div>
-        
+
         <div data-role="main" class="ui-content">
             <div id="documents">
                 <p>Documents</p>
@@ -49,7 +157,7 @@
                     <p>Bills</p>
                 </div>
             </div>
-    
+
             <div id="detailsAndAccountSecurity">
                 <p>Details <a href="" alt="Edit account link">edit</a></p>
                 <hr>
@@ -62,7 +170,7 @@
                 <a href="" alt="Edit account security settings">Edit Security Settings</a>
             </div>
         </div>
-    
+
         <div data-role="footer" id="footer">
             <p>Useful Link</p>
             <a href="" alt="Home Page">Main Page</a>
@@ -75,7 +183,7 @@
             <br>
             <a href="" alt="Home Page">Legal</a>
             <br>
-    
+
             <p>Who are we?</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -86,15 +194,11 @@
                 Mauris dictum imperdiet mi, in dictum orci eleifend in.
                 Nam tristique ipsum eget congue.
             </p>
-    
-            <img class="icon" src="~/Views/Shared/res/icons/Instagram.svg"
-                 alt="Open our Instagram account" />
-            <img class="icon" src="~/Views/Shared/res/icons/linkedin.svg"
-                 alt="Open our LinkedIn account" />
-            <img class="icon" src="~/Views/Shared/res/icons/twitter.svg"
-                 alt="Open our Twitter account" />
-            <img class="icon" src="~/Views/Shared/res/icons/facebook-f.svg"
-                 alt="Open our FaceBook account" />
+
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/Instagram.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/linkedin.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/twitter.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/facebook-f.svg"> </object>
             <p id="ourEmail">xyz@xyz.com</p>
             <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
         </div>
