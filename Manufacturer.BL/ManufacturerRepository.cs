@@ -17,11 +17,18 @@ namespace Manufacturer.BL
             objManufacturerEntities = new ManufacturerEntities();
         }
 
-        public ManufacturerModel GetManufacturerByID(int OrderID)
+        public IEnumerable<ManufacturerModel> GetManufacturerByID(int id)
         {
-            ManufacturerModel manufacturer =
-                ((ManufacturerModel)(from objManufacturer in objManufacturerEntities.ManufacturerProfiles
-                                     select new ManufacturerModel() { ID = OrderID }));
+            var manufacturer =
+                (from objManufacturer in objManufacturerEntities.ManufacturerProfiles
+                 where objManufacturer.ID == id select new ManufacturerModel() { 
+                    ID = objManufacturer.ID,
+                    Name = objManufacturer.Name,
+                    Email = objManufacturer.Email,
+                    Description = objManufacturer.Description,
+                    NumberOfProducts = objManufacturer.NumberOfProducts,
+                    PhoneNumber = objManufacturer.PhoneNumber
+                 }).ToList<ManufacturerModel>();
             return manufacturer;
         }
     }

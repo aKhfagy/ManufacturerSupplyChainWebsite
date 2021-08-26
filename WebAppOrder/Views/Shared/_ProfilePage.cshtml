@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<Manufacturer.Model.ManufacturerModel>
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -109,9 +113,9 @@
             <div id="detailsAndAccountSecurity">
                 <p>Details <a href="" alt="Edit account link">edit</a></p>
                 <hr>
-                <p id="accountDisplayName">Name</p>
-                <p id="accountDisplayEmail">Email</p>
-                <p id="accountDisplayPhoneNumber">Phone Number</p>
+                <p id="accountDisplayName">@Model.First().Name</p>
+                <p id="accountDisplayEmail">@Model.First().Email</p>
+                <p id="accountDisplayPhoneNumber">@Model.First().PhoneNumber</p>
                 <br>
                 <p>Account Security</p>
                 <hr>

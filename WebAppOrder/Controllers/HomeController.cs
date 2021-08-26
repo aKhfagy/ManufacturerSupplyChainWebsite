@@ -13,59 +13,54 @@ namespace WebAppOrder.Controllers
 {
     public class HomeController : Controller
     {
-        private IOrderRepository iOrderRepository;
+        //private IOrderRepository iOrderRepository;
 
-        public HomeController(IOrderRepository _iOrderRepository)
-        {
-            iOrderRepository = _iOrderRepository;
-        }
+        //public HomeController(IOrderRepository _iOrderRepository)
+        //{
+        //    iOrderRepository = _iOrderRepository;
+        //}
   
 
         // GET: Home
-        public ActionResult Index()
-        {
+        //public ActionResult Index()
+        //{
 
 
-            IEnumerable<OrderModel> listOfOrderModels = iOrderRepository.GetAllOrders();
-            return View(listOfOrderModels);
-        }
+        //    IEnumerable<OrderModel> listOfOrderModels = iOrderRepository.GetAllOrders();
+        //    return View(listOfOrderModels);
+        //}
 
-        public ActionResult AddOrder()
-        {
-            OrderModel objOrderModel = new OrderModel()
-            {
-                CompanyID = 2,
-                Company_Name = "Dell",
-                ItemID = 2,
-                Item_Name = "Bag",
-                Item_Quantity = 25,
-                Pick_Up_Date = "25/3/2020",
-                Purchase_Price = 200,
-                Recurring_Order = "no",
-                Shipping_Instructions = "nothing"
-            };
+        //public ActionResult AddOrder()
+        //{
+        //    OrderModel objOrderModel = new OrderModel()
+        //    {
+        //        CompanyID = 2,
+        //        Company_Name = "Dell",
+        //        ItemID = 2,
+        //        Item_Name = "Bag",
+        //        Item_Quantity = 25,
+        //        Pick_Up_Date = "25/3/2020",
+        //        Purchase_Price = 200,
+        //        Recurring_Order = "no",
+        //        Shipping_Instructions = "nothing"
+        //    };
 
-            int result = iOrderRepository.AddOrder(objOrderModel);
-            return RedirectToAction(actionName: "Index");
-        }
+        //    int result = iOrderRepository.AddOrder(objOrderModel);
+        //    return RedirectToAction(actionName: "Index");
+        //}
 
 
-    }
-
-    public class ProfileController : Controller
-    {
         private IManufacturerRepository manufacturerRepository;
 
-        public ProfileController(IManufacturerRepository _manufacturerRepository)
+        public HomeController(IManufacturerRepository manufacturerRepository)
         {
-            manufacturerRepository = _manufacturerRepository;
+            this.manufacturerRepository = manufacturerRepository;
         }
 
-        public ActionResult DisplayManufacturerData(int id)
+        public ActionResult Index()
         {
-            ManufacturerModel model = manufacturerRepository.GetManufacturerByID(id);
-
-            return View();
+            var manufacturerModel = manufacturerRepository.GetManufacturerByID(0);
+            return View(manufacturerModel);
         }
     }
 }
