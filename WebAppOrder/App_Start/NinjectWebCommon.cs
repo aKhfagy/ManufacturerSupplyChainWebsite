@@ -10,6 +10,10 @@ namespace WebAppOrder.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Order.BL;
+    using Order.IBL;
+    using Manufacturer.IBL;
+    using Manufacturer.BL;
 
     public static class NinjectWebCommon 
     {
@@ -44,7 +48,8 @@ namespace WebAppOrder.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-
+                kernel.Bind<IOrderRepository>().To<OrderRepository>();
+                kernel.Bind<IManufacturerRepository>().To<ManufacturerRepository>();
                 RegisterServices(kernel);
                 return kernel;
             }

@@ -20,7 +20,7 @@ namespace DataAccess
         public string Item_Name { get; set; }
         public double Item_Quantity { get; set; }
         public string Pick_Up_Date { get; set; }
-        public double Purchase_Price { get; set; }
+        public decimal Purchaise_Price { get; set; }
         public string Shipping_instructions { get; set; }
         public string Recurring_Order { get; set; }
     }
