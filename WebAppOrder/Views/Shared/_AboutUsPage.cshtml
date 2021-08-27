@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "_AboutUsPage";
+}
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portal</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        body {
+            background: #d6d2cc;
+        }
+
+        .icon {
+            height: 15px;
+            width: 15px;
+            padding-top: 20px;
+            padding-right: 5px;
+        }
+
+        #mainbody {
+            background-image: url("res/about-us-background-image.jpg");
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #04AA6D;
+                    color: white;
+                }
+
+        [data-role=page] {
+            height: 100% !important;
+            position: relative !important;
+        }
+
+        [data-role=footer] {
+            bottom: 0;
+            padding: 20px;
+            position: absolute !important;
+            top: auto !important;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    @RenderBody()
+    <div data-role="page">
+
+        <div class="topnav">
+            <a>Main Page</a>
+            <a>Store</a>
+            <a>Contact Us</a>
+            <a href="~/Views/Shared/_AboutUsPage.cshtml">About Us</a>
+            <a>Your Account</a>
+            <a style="float: right;">Logout</a>
+        </div>
+
+        <div data-role="main" class="ui-content" id="mainbody">
+            <h1>Lorem ipsum dolor sit amet?</h1>
+            <hr>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac est non risus sodales aliquam et maximus nibh. Suspendisse sed facilisis sapien. Mauris at imperdiet augue. Nullam vel efficitur odio, a ornare tortor. Proin a tortor mauris. Nam accumsan fringilla pulvinar. Donec dictum rhoncus odio, convallis eleifend lectus luctus ac.
+                <br>
+                Ut consequat condimentum libero, eleifend condimentum nisi eleifend a. Aliquam rutrum feugiat varius. In augue lacus, sodales ut imperdiet ut, egestas nec enim. Morbi eget metus magna. Nulla eu laoreet leo, vel convallis neque. Sed pulvinar dignissim dolor et porta. Vestibulum volutpat tortor ut venenatis blandit. Curabitur sed vulputate augue. Etiam vulputate nulla eu neque egestas, et viverra arcu dignissim. Vivamus eros urna, dapibus at tellus ut, pharetra porta arcu.
+            </p>
+        </div>
+
+        <div data-role="footer" id="footer">
+
+            <p>Who are we?</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec hendrerit blandit dolor vel convallis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris vitae ipsum in magna posuere pellentesque.
+                Maecenas nec libero a elit aliquet porta.
+                Mauris dictum imperdiet mi, in dictum orci eleifend in.
+                Nam tristique ipsum eget congue.
+            </p>
+
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/Instagram.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/linkedin.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/twitter.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/facebook-f.svg"> </object>
+            <p id="ourEmail">xyz@xyz.com</p>
+            <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
+        </div>
+    </div>
+</body>
+</html>
+

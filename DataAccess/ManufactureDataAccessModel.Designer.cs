@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\nado2\source\repos\OrderMVC\OrderDataAccess\OrderModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Omnia Ahmed\Documents\Visual Studio 2019\ManufacturerSupplyChainWebsite-OrderRequsetsPage\DataAccess\ManufactureDataAccessModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

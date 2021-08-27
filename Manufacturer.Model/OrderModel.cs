@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Order.Model
+namespace Manufacturer.Model
 {
     public class OrderModel
     {

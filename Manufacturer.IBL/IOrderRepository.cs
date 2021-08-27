@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Manufacturer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Order.Model;
 
-namespace Order.IBL
+
+namespace Manufacturer.IBL
 {
 
     public interface IOrderRepository

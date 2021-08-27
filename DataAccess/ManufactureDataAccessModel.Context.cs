@@ -7,21 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OrderDataAccess
+namespace DataAccess
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OrderEntities : DbContext
+    public partial class ManufacturerEntities : DbContext
     {
-        public OrderEntities()
-            : base("name=OrderEntities")
+        public ManufacturerEntities()
+            : base("name=ManufacturerEntities")
         {
         }
     
-
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
     
+        public virtual DbSet<ManufacturerProfile> ManufacturerProfiles { get; set; }
         public virtual DbSet<Requset> Requsets { get; set; }
     }
 }

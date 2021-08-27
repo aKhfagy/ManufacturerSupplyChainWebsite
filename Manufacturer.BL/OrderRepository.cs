@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Order.IBL;
-using Order.Model;
-using Order.BL;
-using DataAccess;
 
-namespace Order.BL
+using DataAccess;
+using Manufacturer.IBL;
+using Manufacturer.Model;
+
+namespace Manufacturer.BL
 {
     public class OrderRepository: IOrderRepository
     {
         
-        private OrdersEntities objOrdersEntities;
+        private ManufacturerEntities objOrdersEntities;
         public OrderRepository()
         {
-            objOrdersEntities = new OrdersEntities();
+            objOrdersEntities = new ManufacturerEntities();
 
             
         }
@@ -39,7 +39,11 @@ namespace Order.BL
             objOrdersEntities.Requsets.Add(objOrder);
             return objOrdersEntities.SaveChanges();
         }
-        
+
+      
+
+      
+
         public IEnumerable<OrderModel> GetAllOrders()
         {
             var listOfOrders =
@@ -69,5 +73,7 @@ namespace Order.BL
         {
             throw new NotImplementedException();
         }
+
+      
     }
 }

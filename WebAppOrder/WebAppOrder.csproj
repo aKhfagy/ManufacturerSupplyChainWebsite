@@ -167,18 +167,6 @@
       <Project>{9ea1b7d4-bc90-4b54-b895-93fd29f8c23e}</Project>
       <Name>Manufacturer.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OrderBussinessLogic\Order.BL.csproj">
-      <Project>{3d7f8b94-aca8-49e9-8c94-7426a659880b}</Project>
-      <Name>Order.BL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OrderIBL\Order.IBL.csproj">
-      <Project>{ff23d895-fe76-4662-b607-80fdc075b4ab}</Project>
-      <Name>Order.IBL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OrderModel\Order.Model.csproj">
-      <Project>{d632fec8-8d4a-4c97-8383-371d8856bcc8}</Project>
-      <Name>Order.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

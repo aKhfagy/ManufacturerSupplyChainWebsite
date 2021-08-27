@@ -10,8 +10,7 @@ namespace WebAppOrder.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using Order.BL;
-    using Order.IBL;
+   
     using Manufacturer.IBL;
     using Manufacturer.BL;
 

@@ -12,6 +12,7 @@ namespace Manufacturer.BL
     {
         private ManufacturerEntities objManufacturerEntities;
 
+
         public ManufacturerRepository()
         {
             objManufacturerEntities = new ManufacturerEntities();

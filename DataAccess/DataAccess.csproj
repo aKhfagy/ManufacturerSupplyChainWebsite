@@ -53,86 +53,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManufacturerDataAccess.Context.cs">
+    <Compile Include="ManufactureDataAccessModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ManufacturerDataAccess.Context.tt</DependentUpon>
+      <DependentUpon>ManufactureDataAccessModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ManufacturerDataAccess.cs">
+    <Compile Include="ManufactureDataAccessModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ManufacturerDataAccess.tt</DependentUpon>
+      <DependentUpon>ManufactureDataAccessModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ManufacturerDataAccess.Designer.cs">
+    <Compile Include="ManufactureDataAccessModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
+      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="ManufacturerProfile.cs">
-      <DependentUpon>ManufacturerDataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OrderDataAccessModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderDataAccessModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OrderDataAccessModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderDataAccessModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OrderDataAccessModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
+      <DependentUpon>ManufactureDataAccessModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requset.cs">
-      <DependentUpon>OrderDataAccessModel.tt</DependentUpon>
+      <DependentUpon>ManufactureDataAccessModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="ManufacturerDataAccess.edmx">
+    <EntityDeploy Include="ManufactureDataAccessModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ManufacturerDataAccess.Designer.cs</LastGenOutput>
+      <LastGenOutput>ManufactureDataAccessModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ManufacturerDataAccess.edmx.diagram">
-      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="OrderDataAccessModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>OrderDataAccessModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="OrderDataAccessModel.edmx.diagram">
-      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
+    <None Include="ManufactureDataAccessModel.edmx.diagram">
+      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ManufacturerDataAccess.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
-      <LastGenOutput>ManufacturerDataAccess.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ManufacturerDataAccess.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManufacturerDataAccess.edmx</DependentUpon>
-      <LastGenOutput>ManufacturerDataAccess.cs</LastGenOutput>
-    </Content>
-    <Content Include="OrderDataAccessModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
-      <LastGenOutput>OrderDataAccessModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="OrderDataAccessModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OrderDataAccessModel.edmx</DependentUpon>
-      <LastGenOutput>OrderDataAccessModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="ManufactureDataAccessModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
+      <LastGenOutput>ManufactureDataAccessModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ManufactureDataAccessModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
+      <LastGenOutput>ManufactureDataAccessModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
