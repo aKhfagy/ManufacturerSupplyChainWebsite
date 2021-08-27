@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1A6D1E7A-1265-4360-9933-F97D74C0EB51}</ProjectGuid>
+    <ProjectGuid>{06760A89-1EB4-4F2B-84F3-6D6313FCE19F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>Manufacturer.BL</RootNamespace>
+    <AssemblyName>Manufacturer.BL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -43,8 +43,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,54 +51,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManufactureDataAccessModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManufactureDataAccessModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ManufactureDataAccessModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManufactureDataAccessModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ManufactureDataAccessModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ManufacturerProfile.cs">
-      <DependentUpon>ManufactureDataAccessModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="ManufacturerRepository.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requset.cs">
-      <DependentUpon>ManufactureDataAccessModel.tt</DependentUpon>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{1a6d1e7a-1265-4360-9933-f97d74c0eb51}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Manufacturer.IBL\Manufacturer.IBL.csproj">
+      <Project>{c467efa7-a7a4-4910-9b6f-0db371998cff}</Project>
+      <Name>Manufacturer.IBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Manufacturer.Model\Manufacturer.Model.csproj">
+      <Project>{9ea1b7d4-bc90-4b54-b895-93fd29f8c23e}</Project>
+      <Name>Manufacturer.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="ManufactureDataAccessModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ManufactureDataAccessModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ManufactureDataAccessModel.edmx.diagram">
-      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ManufactureDataAccessModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
-      <LastGenOutput>ManufactureDataAccessModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ManufactureDataAccessModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManufactureDataAccessModel.edmx</DependentUpon>
-      <LastGenOutput>ManufactureDataAccessModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
