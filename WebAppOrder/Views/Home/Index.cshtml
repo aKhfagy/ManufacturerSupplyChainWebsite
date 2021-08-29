@@ -1,7 +1,20 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Profile";
 }
 
-<h2>Index</h2>
 
+
+<div data-role="main" class="ui-content">
+    <div id="documents">
+        <p>Documents</p>
+        <div id="documentsList">
+            <p>@Html.ActionLink("Order Requests", "GetRecords", "Default", null, new { @class = "action-link" })</p>
+            <hr>
+            <p>@Html.ActionLink("Get Current Orders", "GetRecords", "Default", null, new { @class = "action-link" })</p>
+            <hr>
+            <p>@Html.ActionLink("Get Current Bills", "", "Default", null, new { @class = "action-link" })</p>
+        </div>
+    </div>
+
+
+</div>

@@ -1,23 +1,19 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portal</title>
+    <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <style>
-
-
-        <style >
-        body {
+        html, body {
             background: #d6d2cc;
+            min-height: 100%;
+            margin: 0;
         }
 
         .icon {
@@ -87,9 +83,6 @@
             width: 100%;
         }
 
-        body {
-            background: #d6d2cc;
-        }
 
         #header {
             background-color: #F5F5F5;
@@ -137,7 +130,10 @@
         }
 
         #footer {
-            background-color: #171717;
+            background-color: #333;
+            width: 100%;
+            padding: 20px;
+
         }
 
             #footer > p {
@@ -148,28 +144,6 @@
                 color: #48A14D;
             }
 
-        #companyName {
-            float: right;
-            right: 0;
-            margin: 20px;
-        }
-
-        #menu {
-            margin-top: 50px;
-            padding: 50px;
-            display: none;
-            font-size: 15px;
-            text-align: center;
-        }
-
-        #menuBtn {
-            float: left;
-            margin: 20px;
-        }
-
-        #UsefulLinksFooter {
-            padding: 20px;
-        }
 
         #documents {
             float: left;
@@ -191,70 +165,96 @@
             #documentsList > p {
                 padding: 10px;
             }
+
+        .action-link {
+        }
+
+        a.action-link {
+            color: black;
+            background: #FFFFFF;
+        }
+
+            a.action-link:active {
+                color: black
+            }
+
+            a.action-link:link {
+                color: black
+            }
+
+            a.action-link:visited {
+                color: black
+            }
+
+        .action-link-header {
+        }
+
+        a.action-link-header {
+            color: white;
+            background: rgba(0, 0, 0, 0);
+        }
+
+            a.action-link-header:active {
+                color: white
+            }
+
+            a.action-link-header:link {
+                color: white
+            }
+
+            a.action-link-header:visited {
+                color: white
+            }
+
+            a.action-link:hover {
+                color: black;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            th {
+                text-align: center;
+            }
+
+            #wrapper {
+                min-height: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+
+        .object-info {
+            padding: 40px;
+        }
     </style>
 </head>
 <body>
 
-    <div data-role="page">
-
+    <div data-role="page" id="wrapper">
         <div class="topnav">
-            <a>Main Page</a>
+            <a>@Html.ActionLink("Main Page", "MainPage", "Default", null, new { @class = "action-link-header" })</a>
             <a>Store</a>
-            <a>Contact Us</a>
-            <a>About Us</a>
-            <a>Your Account</a>
-            <a>@Html.ActionLink("Order Requests", "GetRecords", "Default")</a>
+            <a>@Html.ActionLink("About Us", "AboutUs", "Default", null, new { @class = "action-link-header" })</a>
+            <a>@Html.ActionLink("Your Account", "Index", "Default", null, new { @class = "action-link-header" })</a>
             <a style="float: right;">Logout</a> 
         </div>
 
+
         @RenderBody()
-        <!--<div data-role="main" class="ui-content">
-        <div id="documents">
-            <p>Documents</p>
-            <div id="documentsList">
-                <p>Offers</p>
-                <hr>
-                <p>Orders</p>
-                <hr>
-                <p>Bills</p>
-            </div>
-        </div>
-
-        <div id="detailsAndAccountSecurity">
-            <p>Details <a href="" alt="Edit account link">edit</a></p>
-            <hr>-->
-        @* <p id="accountDisplayName">@Model.First().Name</p>
-        <p id="accountDisplayEmail">@Model.First().Email</p>
-        <p id="accountDisplayPhoneNumber">@Model.First().PhoneNumber</p>*@
-        @*<br>
-            <p>Account Security</p>
-            <hr>
-            <a href="" alt="Edit account security settings">Edit Security Settings</a>
-        </div>
-
-    </div>*@
-
-    <div data-role="footer" id="footer">
-
-        <p>Who are we?</p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Donec hendrerit blandit dolor vel convallis.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris vitae ipsum in magna posuere pellentesque.
-            Maecenas nec libero a elit aliquet porta.
-            Mauris dictum imperdiet mi, in dictum orci eleifend in.
-            Nam tristique ipsum eget congue.
-        </p>
 
 
-        <object type="image/svg+xml" data="~/Views/Shared/res/icons/Instagram.svg"> </object>
-        <object type="image/svg+xml" data="~/Views/Shared/res/icons/linkedin.svg"> </object>
-        <object type="image/svg+xml" data="~/Views/Shared/res/icons/twitter.svg"> </object>
-        <object type="image/svg+xml" data="~/Views/Shared/res/icons/facebook-f.svg"> </object>
-        <p id="ourEmail">xyz@xyz.com</p>
-        <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
-    </div>
+        <footer id="footer" class="footer">
+
+            <p>Contact Info</p>
+            <img src="~/Views/Shared/res/icons/Instagram.svg"/> 
+            <img src="~/Views/Shared/res/icons/linkedin.svg"/>
+            <img src="~/Views/Shared/res/icons/twitter.svg"/>
+            <img src="~/Views/Shared/res/icons/facebook-f.svg"/>
+            <br>
+            <p id="ourEmail">xyz@xyz.com</p>
+            <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
+        </footer>
     </div>
 </body>
 </html>

@@ -5,9 +5,9 @@
     ViewBag.Title = "Accept";
 }
 
-<h2>Accept</h2>
 
-<div>
+<div class="object-info">
+    <h2>Accept</h2>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -84,7 +84,7 @@
 
     </dl>
 </div>
-<p>
+<p style="text-align: center;">
     @Html.ActionLink("Proceed to Checkout", "Proceed_To_Checkout", new { id = Model.ItemID }) |
     @Html.ActionLink("Back to List", "GetRecords")
 </p>
