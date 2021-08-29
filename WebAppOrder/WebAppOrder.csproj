@@ -72,14 +72,11 @@
     <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.MVC3.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
       <Private>True</Private>
-<<<<<<< HEAD
     </Reference>
     <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
-=======
->>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -127,7 +124,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -184,11 +180,6 @@
     <Content Include="Views\Default\Reject.cshtml" />
     <Content Include="Views\Default\Proceed_To_Checkout.cshtml" />
     <Content Include="Views\Default\Cart.cshtml" />
-=======
-    <Content Include="Content\Site.css" />
-    <Content Include="Global.asax" />
-    <None Include="packages.config" />
->>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     <None Include="Views\Shared\_ProfilePage.cshtml" />
     <Content Include="Views\Shared\res\icons\facebook-f.svg" />
     <Content Include="Views\Shared\res\icons\Instagram.svg" />
@@ -210,10 +201,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-<<<<<<< HEAD
-=======
-    <Content Include="Views\Home\Index.cshtml" />
->>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -229,21 +216,6 @@
     <ProjectReference Include="..\Manufacturer.BL\Manufacturer.BL.csproj">
       <Project>{06760a89-1eb4-4f2b-84f3-6d6313fce19f}</Project>
       <Name>Manufacturer.BL</Name>
-<<<<<<< HEAD
-=======
-    </ProjectReference>
-    <ProjectReference Include="..\Manufacturer.IBL\Manufacturer.IBL.csproj">
-      <Project>{c467efa7-a7a4-4910-9b6f-0db371998cff}</Project>
-      <Name>Manufacturer.IBL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Manufacturer.Model\Manufacturer.Model.csproj">
-      <Project>{9ea1b7d4-bc90-4b54-b895-93fd29f8c23e}</Project>
-      <Name>Manufacturer.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OrderBussinessLogic\Order.BL.csproj">
-      <Project>{3d7f8b94-aca8-49e9-8c94-7426a659880b}</Project>
-      <Name>Order.BL</Name>
->>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     </ProjectReference>
     <ProjectReference Include="..\Manufacturer.IBL\Manufacturer.IBL.csproj">
       <Project>{c467efa7-a7a4-4910-9b6f-0db371998cff}</Project>

@@ -16,15 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manufacturer.IBL", "Manufac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manufacturer.BL", "Manufacturer.BL\Manufacturer.BL.csproj", "{06760A89-1EB4-4F2B-84F3-6D6313FCE19F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manufacturer.Model", "Manufacturer.Model\Manufacturer.Model.csproj", "{9EA1B7D4-BC90-4B54-B895-93FD29F8C23E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manufacturer.IBL", "Manufacturer.IBL\Manufacturer.IBL.csproj", "{C467EFA7-A7A4-4910-9B6F-0DB371998CFF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{9EA1B7D4-BC90-4B54-B895-93FD29F8C23E} = {9EA1B7D4-BC90-4B54-B895-93FD29F8C23E}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manufacturer.BL", "Manufacturer.BL\Manufacturer.BL.csproj", "{06760A89-1EB4-4F2B-84F3-6D6313FCE19F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

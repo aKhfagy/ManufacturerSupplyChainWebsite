@@ -3,24 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-<<<<<<< HEAD
 using Manufacturer.BL;
 using Manufacturer.IBL;
 using Manufacturer.Model;
 
-=======
-using Order.BL;
-using Order.IBL;
-using Manufacturer.IBL;
-using Manufacturer.Model;
-using Order.Model;
->>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
 
 namespace WebAppOrder.Controllers
 {
     public class HomeController : Controller
     {
-<<<<<<< HEAD
         
 
 
@@ -59,50 +50,9 @@ namespace WebAppOrder.Controllers
             IEnumerable<OrderModel> listOfOrderModels = iOrderRepository.GetAllOrders();
             return View(listOfOrderModels);
         }
-=======
-        //private IOrderRepository iOrderRepository;
 
-        //public HomeController(IOrderRepository _iOrderRepository)
-        //{
-        //    iOrderRepository = _iOrderRepository;
-        //}
-  
-
-        // GET: Home
-        //public ActionResult Index()
-        //{
-
-
-        //    IEnumerable<OrderModel> listOfOrderModels = iOrderRepository.GetAllOrders();
-        //    return View(listOfOrderModels);
-        //}
-
-        //public ActionResult AddOrder()
-        //{
-        //    OrderModel objOrderModel = new OrderModel()
-        //    {
-        //        CompanyID = 2,
-        //        Company_Name = "Dell",
-        //        ItemID = 2,
-        //        Item_Name = "Bag",
-        //        Item_Quantity = 25,
-        //        Pick_Up_Date = "25/3/2020",
-        //        Purchase_Price = 200,
-        //        Recurring_Order = "no",
-        //        Shipping_Instructions = "nothing"
-        //    };
->>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
-
-        //    int result = iOrderRepository.AddOrder(objOrderModel);
-        //    return RedirectToAction(actionName: "Index");
-        //}
-
-
-        private IManufacturerRepository manufacturerRepository;
-
-        public HomeController(IManufacturerRepository manufacturerRepository)
+        public ActionResult AddOrder()
         {
-<<<<<<< HEAD
             OrderModel objOrderModel = new OrderModel()
             {
                 CompanyID = 2,
@@ -175,15 +125,5 @@ namespace WebAppOrder.Controllers
 */
 
 
-=======
-            this.manufacturerRepository = manufacturerRepository;
-        }
-
-        public ActionResult Index()
-        {
-            var manufacturerModel = manufacturerRepository.GetManufacturerByID(0);
-            return View(manufacturerModel);
-        }
->>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     }
 }
