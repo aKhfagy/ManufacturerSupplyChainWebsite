@@ -61,7 +61,14 @@ namespace Manufacturer.BL
 
         public void InsertProductRecord(ProductModel pro)
         {
-            manufacturerEntities.Products.Add(pro);
+            Product product = new Product();
+            product.ProductID = pro.ProductID;
+            product.ProductCategory = pro.ProductCategory;
+            product.ProductName = pro.ProductName;
+            product.ShipmentDate = pro.ShipmentDate;
+            product.Description = pro.Description;
+            product.TotalPrice = pro.TotalPrice;
+            manufacturerEntities.Products.Add(product);
             manufacturerEntities.SaveChanges();
 
 
