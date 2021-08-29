@@ -3,7 +3,22 @@
     ViewBag.Title = "Index";
 }
 
-<h2 style="padding-bottom:10px">Orders</h2>
-<p style="scroll-padding-top">
+
+<div data-role="main" class="ui-content">
+    <div id="documents">
+        <p>Documents</p>
+        <div id="documentsList">
+            <p>
+                @Html.ActionLink("Get Current Orders", "GetRecords")
+            </p>
+            <hr>
+            <hr>
+            <p>@Html.ActionLink("Get Current Bills", "GetRecords")</p>
+        </div>
+    </div>
+
+
+</div>
+@*<p style="scroll-padding-top">
     @Html.ActionLink("Get Current Orders", "GetRecords")
-</p>
+</p>*@

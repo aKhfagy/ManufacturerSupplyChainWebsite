@@ -6,172 +6,172 @@
 
 }
 
-<h2 style="padding-bottom:40px;padding-top:40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:larger">GetRecords</h2>
+<div data-role="main" class="ui-content">
 
+    <h2 style="padding: 40px; text-align: center;">Records</h2>
 
-<LINK REL=StyleSheet HREF="StyleSheet1.css" TYPE="text/css" MEDIA=screen>
-<details>
-    <summary>Accepted Orders.</summary>
-    <div class="content">
-        <p>
+    <table class="table bg-success table-secondary">
+        <thead class="thead-dark">
 
-            <table class="table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Company_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Name)
+
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shipping_Instructions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pick_Up_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Purchase_Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Recurring_Order)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
                 <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CompanyID)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Company_Name)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ItemID)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Item_Name)
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Company_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemID)
+                    </td>
 
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Item_Quantity)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Shipping_Instructions)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Pick_Up_Date)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Purchase_Price)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Recurring_Order)
-                    </th>
-                    <th></th>
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.Item_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item_Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Shipping_Instructions)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pick_Up_Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Purchase_Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recurring_Order)
+                    </td>
+                    <td>
+
+                        @Html.ActionLink("Details", "Details", new { id = item.ItemID })
+                        @*            @Html.ActionLink("Delete", "Delete", new { id=item.CompanyID })
+                        *@
+                    </td>
                 </tr>
+            }
+            </tbody>
 
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CompanyID)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Company_Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ItemID)
-                        </td>
-
-                        <td>
-
-                            @Html.DisplayFor(modelItem => item.Item_Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Item_Quantity)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Shipping_Instructions)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Pick_Up_Date)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Purchase_Price)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Recurring_Order)
-                        </td>
-                        <td>
-
-                            @Html.ActionLink("Details", "Details", new { id = item.ItemID })
-                            @*            @Html.ActionLink("Delete", "Delete", new { id=item.CompanyID })
-                            *@
-                        </td>
-                    </tr>
-                }
-
-            </table>
-        </p>
-
-        <p style=" font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif'';font:350 ;padding-bottom:20px;padding-top:220px">
-            -Current Active Orders
-        </p>
-
-    </div>
-
-</details>
+    </table>
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Company_Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Item_Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Item_Quantity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Shipping_Instructions)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Pick_Up_Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Purchase_Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Recurring_Order)
-        </th>
-        <th></th>
-    </tr>
+    <br>
+    <hr>
+    <h2 style="padding:40px; text-align: center;">Active Orders</h2>
+    <table class="table bg-success">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Company_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shipping_Instructions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pick_Up_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Purchase_Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Recurring_Order)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CompanyID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Company_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ItemID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Item_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Item_Quantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Shipping_Instructions)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pick_Up_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Purchase_Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Recurring_Order)
-            </td>
-            <td>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Company_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item_Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Shipping_Instructions)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pick_Up_Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Purchase_Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recurring_Order)
+                    </td>
+                    <td>
 
-                @Html.ActionLink("Accept", "Accept", new { id = item.ItemID }) /
-                @Html.ActionLink("Reject Order", "Reject", new { id = item.ItemID }) /
-                @Html.ActionLink("Details", "Details", new { id = item.ItemID })
+                        @Html.ActionLink("Accept", "Accept", new { id = item.ItemID }) /
+                        @Html.ActionLink("Reject Order", "Reject", new { id = item.ItemID }) /
+                        @Html.ActionLink("Details", "Details", new { id = item.ItemID })
 
 
-            </td>
-        </tr>
-    }
+                    </td>
+                </tr>
+             }
+        </tbody>
 
-</table>
+    </table>
+
+</div>
