@@ -90,8 +90,21 @@
             font-size: 30px;
         }
 
+        a.one:link {
+            color: black;
+        }
+
+        a.one:visited {
+            color: #0000ff;
+        }
+
+        a.one:hover {
+            color: transparent;
+        }
+
+@*
         a:link, a:visited {
-            background-color: bisque;
+            background-color: transparent;
             border: none;
             color: black;
             padding: 15px 32px;
@@ -102,11 +115,12 @@
             font-size: 16px;
             cursor: pointer;
             display: inline-block;
-        }
+        }*@
 
         a:hover, a:active {
-            background-color: #6D0062;
+            background-color: transparent;
         }
+
 
         table {
             border-collapse: collapse;
@@ -171,7 +185,6 @@
 
         a.action-link {
             color: black;
-            background: #FFFFFF;
         }
 
             a.action-link:active {
@@ -226,25 +239,72 @@
         .object-info {
             padding: 40px;
         }
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            color:white;
+@*            position: relative;
+*@          <!--background-color: #f9f9f9;-->
+            min-width: 160px;
+@*            box-shadow: 10px 80px 160px 10px #b495c9;
+*@            padding: 19px 16px;
+              padding-top:19px;
+            z-index: 1;
+            bottom:0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+
+
     </style>
 </head>
 <body>
 
     <div data-role="page">
+
         <div class="topnav">
-            <a>@Html.ActionLink("Main Page", "Index", "Default", new { @class = "action-link-header" })</a>
+            <a>@Html.ActionLink("Main Page", "Index", "Default", null, new { @class = "action-link-header" })</a>
             <a>Store</a>
             <a>@Html.ActionLink("About Us", "AboutUs", "Default", new { @class = "action-link-header" })</a>
-            <a>@Html.ActionLink("Your Account", "Index", "Default", null, new { @class = "action-link-header" })</a>
 
-            <a style="float: right;">
-                @Html.ActionLink("Log Out", "LogOut", "Default", null, new { @class = "action-link-header" })</a>
+            <a style="float: right;" class="action-link-header">
+
+                @Html.ActionLink("Log Out", "LogOut", "Default", null, new { @class = "action-link-header" })
+
             </a>
+
+            <div class="dropdown">
+                <a>@Html.ActionLink("Your Account", "Index", "Default", null, new { @class = "action-link-header" })</a>
+                <div class="dropdown-content">
+                    @Html.ActionLink("Order Requests", "GetRecords", "Default", null, new { @class = "action-link-header" })
+                    <hr>
+                    @Html.ActionLink("My Account Info", "My_Account", "Home", null, new { @class = "action-link-header" })
+
+                </div>
+
+            </div>
         </div>
+
+
+
+
+
         <div id="wrapper">
 
             @RenderBody()
         </div>
+
+
 
 
 
@@ -262,3 +322,5 @@
     </div>
 </body>
 </html>
+
+

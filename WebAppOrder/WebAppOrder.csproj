@@ -165,7 +165,6 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\GetRecords.cshtml" />
     <Content Include="Views\Default\Details.cshtml" />
@@ -181,6 +180,7 @@
     <Content Include="Views\Default\Cart.cshtml" />
     <Content Include="Views\Default\AboutUs.cshtml" />
     <Content Include="Views\Default\LogOut.cshtml" />
+    <Content Include="Views\Home\My_Account.cshtml" />
     <None Include="Views\Shared\_ProfilePage.cshtml" />
     <Content Include="Views\Shared\res\icons\facebook-f.svg" />
     <Content Include="Views\Shared\res\icons\Instagram.svg" />
