@@ -27,5 +27,6 @@ namespace DataAccess
     
         public virtual DbSet<ManufacturerProfile> ManufacturerProfiles { get; set; }
         public virtual DbSet<Requset> Requsets { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
     }
 }
