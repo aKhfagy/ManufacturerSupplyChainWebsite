@@ -1,0 +1,90 @@
+﻿
+@model Manufacturer.Model.OrderModel
+
+@{
+    ViewBag.Title = "Accept";
+}
+
+<h2>Accept</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Company_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shipping_Instructions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shipping_Instructions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pick_Up_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pick_Up_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Purchase_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchase_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recurring_Order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recurring_Order)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Proceed to Checkout", "Proceed_To_Checkout", new { id = Model.ItemID }) |
+    @Html.ActionLink("Back to List", "GetRecords")
+</p>

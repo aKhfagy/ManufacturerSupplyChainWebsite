@@ -1,0 +1,260 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portal</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+
+
+        <style >
+        body {
+            background: #d6d2cc;
+        }
+
+        .icon {
+            height: 15px;
+            width: 15px;
+            padding-top: 20px;
+            padding-right: 5px;
+        }
+
+        #documents {
+            float: left;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #detailsAndAccountSecurity {
+            float: right;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #documentsList {
+            background: #FFFFFF;
+            width: stretch;
+        }
+
+            #documentslist > p {
+                padding: 10px;
+            }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #04AA6D;
+                    color: white;
+                }
+
+        [data-role=page] {
+            height: 100% !important;
+            position: relative !important;
+        }
+
+        [data-role=footer] {
+            bottom: 0;
+            padding: 20px;
+            position: absolute !important;
+            top: auto !important;
+            width: 100%;
+        }
+
+        body {
+            background: #d6d2cc;
+        }
+
+        #header {
+            background-color: #F5F5F5;
+            font-size: 30px;
+        }
+
+        a:link, a:visited {
+            background-color: bisque;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: #6D0062;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 2px solid black;
+            text-align: left;
+        }
+
+        tr:hover {
+            background-color: #b495c9;
+        }
+
+
+        .icon {
+            height: 15px;
+            width: 15px;
+            padding-top: 20px;
+            padding-right: 5px;
+        }
+
+        #footer {
+            background-color: #171717;
+        }
+
+            #footer > p {
+                color: #F5F5F5;
+            }
+
+            #footer > a {
+                color: #48A14D;
+            }
+
+        #companyName {
+            float: right;
+            right: 0;
+            margin: 20px;
+        }
+
+        #menu {
+            margin-top: 50px;
+            padding: 50px;
+            display: none;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        #menuBtn {
+            float: left;
+            margin: 20px;
+        }
+
+        #UsefulLinksFooter {
+            padding: 20px;
+        }
+
+        #documents {
+            float: left;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #detailsAndAccountSecurity {
+            float: right;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #documentsList {
+            background: #FFFFFF;
+            width: stretch;
+        }
+
+            #documentsList > p {
+                padding: 10px;
+            }
+    </style>
+</head>
+<body>
+
+    <div data-role="page">
+
+        <div class="topnav">
+            <a>Main Page</a>
+            <a>Store</a>
+            <a>Contact Us</a>
+            <a>About Us</a>
+            <a>Your Account</a>
+            <a>@Html.ActionLink("Order Requests", "GetRecords", "Default")</a>
+            <a style="float: right;">Logout</a> 
+        </div>
+
+        @RenderBody()
+        <!--<div data-role="main" class="ui-content">
+        <div id="documents">
+            <p>Documents</p>
+            <div id="documentsList">
+                <p>Offers</p>
+                <hr>
+                <p>Orders</p>
+                <hr>
+                <p>Bills</p>
+            </div>
+        </div>
+
+        <div id="detailsAndAccountSecurity">
+            <p>Details <a href="" alt="Edit account link">edit</a></p>
+            <hr>-->
+        @* <p id="accountDisplayName">@Model.First().Name</p>
+        <p id="accountDisplayEmail">@Model.First().Email</p>
+        <p id="accountDisplayPhoneNumber">@Model.First().PhoneNumber</p>*@
+        @*<br>
+            <p>Account Security</p>
+            <hr>
+            <a href="" alt="Edit account security settings">Edit Security Settings</a>
+        </div>
+
+    </div>*@
+
+    <div data-role="footer" id="footer">
+
+        <p>Who are we?</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec hendrerit blandit dolor vel convallis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris vitae ipsum in magna posuere pellentesque.
+            Maecenas nec libero a elit aliquet porta.
+            Mauris dictum imperdiet mi, in dictum orci eleifend in.
+            Nam tristique ipsum eget congue.
+        </p>
+
+
+        <object type="image/svg+xml" data="~/Views/Shared/res/icons/Instagram.svg"> </object>
+        <object type="image/svg+xml" data="~/Views/Shared/res/icons/linkedin.svg"> </object>
+        <object type="image/svg+xml" data="~/Views/Shared/res/icons/twitter.svg"> </object>
+        <object type="image/svg+xml" data="~/Views/Shared/res/icons/facebook-f.svg"> </object>
+        <p id="ourEmail">xyz@xyz.com</p>
+        <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
+    </div>
+    </div>
+</body>
+</html>

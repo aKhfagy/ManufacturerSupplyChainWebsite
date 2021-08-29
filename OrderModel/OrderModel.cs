@@ -15,7 +15,7 @@ namespace Order.Model
         public float Item_Quantity { get; set; }
         public string Shipping_Instructions { get; set; }
         public string Pick_Up_Date { get; set; }
-        public float Purchase_Price { get; set; }
+        public decimal Purchase_Price { get; set; }
         public string Recurring_Order { get; set; }
 
 
