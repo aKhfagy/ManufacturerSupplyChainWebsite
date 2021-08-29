@@ -220,8 +220,8 @@
 
             #wrapper {
                 min-height: 100%;
-                position: absolute;
-                bottom: 0;
+                padding: 50px;
+
             }
 
         .object-info {
@@ -231,7 +231,7 @@
 </head>
 <body>
 
-    <div data-role="page" id="wrapper">
+    <div data-role="page">
         <div class="topnav">
             <a>@Html.ActionLink("Main Page", "MainPage", "Default", null, new { @class = "action-link-header" })</a>
             <a>Store</a>
@@ -239,9 +239,11 @@
             <a>@Html.ActionLink("Your Account", "Index", "Default", null, new { @class = "action-link-header" })</a>
             <a style="float: right;">Logout</a> 
         </div>
-
+        <div id="wrapper">
 
         @RenderBody()
+        </div>
+
 
 
         <footer id="footer" class="footer">
