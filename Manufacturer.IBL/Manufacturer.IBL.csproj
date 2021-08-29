@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IManufacturerRepository.cs" />
+<<<<<<< HEAD
     <Compile Include="IOrderRepository.cs" />
+=======
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

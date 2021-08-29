@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿
+=======
+﻿@model IEnumerable<Manufacturer.Model.ManufacturerModel>
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
 @{
     ViewBag.Title = "Index";
 }
@@ -13,9 +17,12 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <style>
+<<<<<<< HEAD
 
 
         <style >
+=======
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
         body {
             background: #d6d2cc;
         }
@@ -86,6 +93,7 @@
             top: auto !important;
             width: 100%;
         }
+<<<<<<< HEAD
 
         body {
             background: #d6d2cc;
@@ -195,6 +203,12 @@
 </head>
 <body>
 
+=======
+    </style>
+</head>
+<body>
+    @RenderBody()
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     <div data-role="page">
 
         <div class="topnav">
@@ -203,6 +217,7 @@
             <a>Contact Us</a>
             <a>About Us</a>
             <a>Your Account</a>
+<<<<<<< HEAD
             <a>@Html.ActionLink("Order Requests", "GetRecords", "Default")</a>
             <a style="float: right;">Logout</a> 
         </div>
@@ -255,6 +270,56 @@
         <p id="ourEmail">xyz@xyz.com</p>
         <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
     </div>
+=======
+            <a style="float: right;">Logout</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div id="documents">
+                <p>Documents</p>
+                <div id="documentsList">
+                    <p>Offers</p>
+                    <hr>
+                    <p>Orders</p>
+                    <hr>
+                    <p>Bills</p>
+                </div>
+            </div>
+
+            <div id="detailsAndAccountSecurity">
+                <p>Details <a href="" alt="Edit account link">edit</a></p>
+                <hr>
+                <p id="accountDisplayName">@Model.First().Name</p>
+                <p id="accountDisplayEmail">@Model.First().Email</p>
+                <p id="accountDisplayPhoneNumber">@Model.First().PhoneNumber</p>
+                <br>
+                <p>Account Security</p>
+                <hr>
+                <a href="" alt="Edit account security settings">Edit Security Settings</a>
+            </div>
+        </div>
+
+        <div data-role="footer" id="footer">
+
+            <p>Who are we?</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec hendrerit blandit dolor vel convallis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris vitae ipsum in magna posuere pellentesque.
+                Maecenas nec libero a elit aliquet porta.
+                Mauris dictum imperdiet mi, in dictum orci eleifend in.
+                Nam tristique ipsum eget congue.
+            </p>
+
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/Instagram.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/linkedin.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/twitter.svg"> </object>
+            <object type="image/svg+xml" data="~/Views/Shared/res/icons/facebook-f.svg"> </object>
+            <p id="ourEmail">xyz@xyz.com</p>
+            <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
+        </div>
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     </div>
 </body>
 </html>

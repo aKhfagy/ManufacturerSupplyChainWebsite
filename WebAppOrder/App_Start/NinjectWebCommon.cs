@@ -10,7 +10,12 @@ namespace WebAppOrder.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+<<<<<<< HEAD
    
+=======
+    using Order.BL;
+    using Order.IBL;
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     using Manufacturer.IBL;
     using Manufacturer.BL;
 
@@ -47,9 +52,14 @@ namespace WebAppOrder.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+<<<<<<< HEAD
                 kernel.Bind<IManufacturerRepository>().To<ManufacturerRepository>();
                 kernel.Bind<IOrderRepository>().To<OrderRepository>();
 
+=======
+                kernel.Bind<IOrderRepository>().To<OrderRepository>();
+                kernel.Bind<IManufacturerRepository>().To<ManufacturerRepository>();
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
                 RegisterServices(kernel);
                 return kernel;
             }
@@ -66,7 +76,10 @@ namespace WebAppOrder.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+<<<<<<< HEAD
            // kernel.Bind<IOrderRepository>().To<OrderRepository>().InRequestScope();
+=======
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
         }        
     }
 }

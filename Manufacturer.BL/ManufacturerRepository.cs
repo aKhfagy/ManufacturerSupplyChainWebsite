@@ -10,6 +10,7 @@ namespace Manufacturer.BL
 {
     public class ManufacturerRepository : IManufacturerRepository
     {
+<<<<<<< HEAD
         private ManufacturerEntities1 objManufacturerEntities;
 
 
@@ -23,12 +24,27 @@ namespace Manufacturer.BL
             var manufacturer =
                 (from objManufacturer in objManufacturerEntities.ManufacturerProfiles
                  select new ManufacturerModel() { 
+=======
+        private ManufacturerEntities objManufacturerEntities;
+
+        public ManufacturerRepository()
+        {
+            objManufacturerEntities = new ManufacturerEntities();
+        }
+
+        public IEnumerable<ManufacturerModel> GetManufacturerByID(int id)
+        {
+            var manufacturer =
+                (from objManufacturer in objManufacturerEntities.ManufacturerProfiles
+                 where objManufacturer.ID == id select new ManufacturerModel() { 
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
                     ID = objManufacturer.ID,
                     Name = objManufacturer.Name,
                     Email = objManufacturer.Email,
                     Description = objManufacturer.Description,
                     NumberOfProducts = objManufacturer.NumberOfProducts,
                     PhoneNumber = objManufacturer.PhoneNumber
+<<<<<<< HEAD
                  }).ToList();
             return manufacturer;
         }
@@ -69,5 +85,10 @@ namespace Manufacturer.BL
         }
 
         
+=======
+                 }).ToList<ManufacturerModel>();
+            return manufacturer;
+        }
+>>>>>>> f8d59a750b3f71ff834a2a661a5d47f3629d7d2c
     }
 }
