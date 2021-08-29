@@ -26,7 +26,6 @@
         #documents {
             float: left;
             width: 40%;
-            padding: 5%;
         }
 
         #detailsAndAccountSecurity {
@@ -234,14 +233,13 @@
     <div data-role="page">
         <div class="topnav">
             <a>@Html.ActionLink("Main Page", "MainPage", "Default", null, new { @class = "action-link-header" })</a>
-            <a>Store</a>
+            <a>@Html.ActionLink("Products", "Products", "products", null, new { @class = "action-link-header" })</a>
             <a>@Html.ActionLink("About Us", "AboutUs", "Default", null, new { @class = "action-link-header" })</a>
             <a>@Html.ActionLink("Your Account", "Index", "Default", null, new { @class = "action-link-header" })</a>
             <a style="float: right;">Logout</a> 
         </div>
         <div id="wrapper">
-
-        @RenderBody()
+            @RenderBody()
         </div>
 
 
