@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "LogOut";
+}
+
+<h2>LogOut</h2>
+
+<div class="object-info">
+
+    <h2>Are You Sure You Want to Log Out</h2>
+    @Html.ActionLink("Cancel", "Index")
+
+
+    <button id="submitForm" style="width: fit-content; padding: 1%; background-color: red; color: azure;">LogOut</button>
+</div>
+
+
+<script>
+    $("#submitForm").click(function () {
+
+@*        alert("The Request Has Benn Removed from your Orders list Succesfully");
+*@        if (confirm("You Have Logged Out Succesfully"));
+
+
+    });
+</script>
+

@@ -5,18 +5,21 @@
 
 <div class="object-info">
 
-<h2>Are You Sure You Want to Remove this Order From List</h2>
-@Html.ActionLink("Cancel Rejection", "GetRecords")
+    <h2>Are You Sure You Want to Remove this Order From List</h2>
+    @Html.ActionLink("Cancel Rejection", "GetRecords")
 
 
-<button id="submitForm" style="width: fit-content; padding: 1%; background-color: red; color: azure;">Reject Order Completely</button>
+    <button id="submitForm" style="width: fit-content; padding: 1%; background-color: red; color: azure;">Reject Order Completely</button>
 </div>
 
 
 <script>
     $("#submitForm").click(function () {
-        alert("The Request Has Benn Removed from your Orders list Succesfully");
+@*        alert("The Request Has Benn Removed from your Orders list Succesfully");
+*@        if (confirm("The Request Has Benn Removed from your Orders list Succesfully")) ;
+
 
     });
 
 </script>
+

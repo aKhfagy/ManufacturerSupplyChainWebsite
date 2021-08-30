@@ -103,5 +103,16 @@ namespace WebAppOrder.Controllers
             return View(myorder);
         }
 
+        public ActionResult AboutUs()
+        {
+            return View();
+
+        }
+        public ActionResult LogOut()
+        {
+            return View();
+
+        }
+        
     }
 }
