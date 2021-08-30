@@ -14,10 +14,10 @@ namespace Manufacturer.BL
     public class OrderRepository : IOrderRepository
     {
 
-        private ManufacturerEntities1 objOrdersEntities;
+        private ManufacturerEntities objOrdersEntities;
         public OrderRepository()
         {
-            objOrdersEntities = new ManufacturerEntities1();
+            objOrdersEntities = new ManufacturerEntities();
 
 
         }

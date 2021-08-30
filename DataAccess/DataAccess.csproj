@@ -71,6 +71,9 @@
     <Compile Include="ManufacturerProfile.cs">
       <DependentUpon>ManufactureModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>ManufactureModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requset.cs">
       <DependentUpon>ManufactureModel.tt</DependentUpon>

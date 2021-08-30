@@ -17,6 +17,17 @@
           <Property Name="PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NumberOfProducts" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductCategory" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" Nullable="false" />
+          <Property Name="ShipmentDate" Type="date" Nullable="false" />
+        </EntityType>
         <EntityType Name="Requset">
           <Key>
             <PropertyRef Name="CompanyID" />
@@ -33,6 +44,7 @@
         </EntityType>
         <EntityContainer Name="ManufacturerModelStoreContainer">
           <EntitySet Name="ManufacturerProfile" EntityType="Self.ManufacturerProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Requset" EntityType="Self.Requset" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -52,6 +64,17 @@
           <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NumberOfProducts" Type="Int32" Nullable="false" />
         </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ShipmentDate" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
         <EntityType Name="Requset">
           <Key>
             <PropertyRef Name="CompanyID" />
@@ -66,8 +89,9 @@
           <Property Name="Shipping_instructions" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Recurring_Order" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="ManufacturerEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ManufacturerEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ManufacturerProfiles" EntityType="Self.ManufacturerProfile" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="Requsets" EntityType="Self.Requset" />
         </EntityContainer>
       </Schema>
@@ -75,7 +99,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ManufacturerModelStoreContainer" CdmEntityContainer="ManufacturerEntities1">
+        <EntityContainerMapping StorageEntityContainer="ManufacturerModelStoreContainer" CdmEntityContainer="ManufacturerEntities">
           <EntitySetMapping Name="ManufacturerProfiles">
             <EntityTypeMapping TypeName="ManufacturerModel.ManufacturerProfile">
               <MappingFragment StoreEntitySet="ManufacturerProfile">
@@ -86,6 +110,18 @@
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="NumberOfProducts" ColumnName="NumberOfProducts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="ManufacturerModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductCategory" ColumnName="ProductCategory" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ShipmentDate" ColumnName="ShipmentDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

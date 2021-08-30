@@ -10,12 +10,12 @@ namespace Manufacturer.BL
 {
     public class ManufacturerRepository : IManufacturerRepository
     {
-        private ManufacturerEntities1 objManufacturerEntities;
+        private ManufacturerEntities objManufacturerEntities;
 
 
         public ManufacturerRepository()
         {
-            objManufacturerEntities = new ManufacturerEntities1();
+            objManufacturerEntities = new ManufacturerEntities();
         }
 
         public IEnumerable<ManufacturerModel> GetAllManufacturers()
