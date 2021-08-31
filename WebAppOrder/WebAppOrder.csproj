@@ -186,7 +186,7 @@
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
-    <None Include="Views\Shared\_ProfilePage.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\res\icons\facebook-f.svg" />
     <Content Include="Views\Shared\res\icons\Instagram.svg" />
     <Content Include="Views\Shared\res\icons\linkedin.svg" />
