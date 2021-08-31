@@ -13,10 +13,10 @@ namespace DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ManufacturerEntities : DbContext
+    public partial class ManufacturerEntities1 : DbContext
     {
-        public ManufacturerEntities()
-            : base("name=ManufacturerEntities")
+        public ManufacturerEntities1()
+            : base("name=ManufacturerEntities1")
         {
         }
     
@@ -26,7 +26,6 @@ namespace DataAccess
         }
     
         public virtual DbSet<ManufacturerProfile> ManufacturerProfiles { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Requset> Requsets { get; set; }
     }
 }
