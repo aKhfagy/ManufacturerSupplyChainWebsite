@@ -10,9 +10,12 @@ namespace Manufacturer.IBL
     public interface IProductsRepository
     {
         void InsertProductRecord(ProductModel pro);
+
+
         IEnumerable<ProductModel> getProduct();
         void UpdateProductRecord(ProductModel pro);
         void DeleteProductRecord(int proID);
         ProductModel GetProductByID(int proID);
+        
     }
 }

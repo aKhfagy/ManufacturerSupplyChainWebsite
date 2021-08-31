@@ -9,20 +9,17 @@ namespace Manufacturer.BL
 {
     public class ProductsRepository : IProductsRepository
     {
-       
-        private ManufacturerEntities1 manufacturerEntities;
-        public ProductsRepository(ManufacturerEntities1 manufacturerEntities)
+
+        private ManufacturerEntities manufacturerEntities;
+        public ProductsRepository(ManufacturerEntities manufacturerEntities)
         {
             this.manufacturerEntities = manufacturerEntities;
         }
 
         public void DeleteProductRecord(int proID)
         {
-            var productToDelete = 
-                from product in manufacturerEntities.Products 
-                where product.ProductID == proID 
-                select product;
-            manufacturerEntities.Products.Remove(productToDelete.First());
+            Product delepro = manufacturerEntities.Products.Find(proID);
+            manufacturerEntities.Products.Remove(delepro);
             manufacturerEntities.SaveChanges();
         }
 
@@ -45,39 +42,45 @@ namespace Manufacturer.BL
         public ProductModel GetProductByID(int proID)
         {
             var product_ =
-                from product in manufacturerEntities.Products
-                where product.ProductID == proID
-                select new ProductModel
-                {
-                    ProductID = product.ProductID,
-                    ProductName = product.ProductName,
-                    ProductCategory = product.ProductCategory,
-                    TotalPrice = product.TotalPrice,
-                    Description = product.Description,
-                    ShipmentDate = product.ShipmentDate
-                };
+               from product in manufacturerEntities.Products
+               where product.ProductID == proID
+               select new ProductModel
+               {
+                   ProductID = product.ProductID,
+                   ProductName = product.ProductName,
+                   ProductCategory = product.ProductCategory,
+                   TotalPrice = product.TotalPrice,
+                   Description = product.Description,
+                   ShipmentDate = product.ShipmentDate
+               };
             return product_.First();
         }
 
         public void InsertProductRecord(ProductModel pro)
         {
-            Product product = new Product();
-            product.ProductID = pro.ProductID;
-            product.ProductCategory = pro.ProductCategory;
-            product.ProductName = pro.ProductName;
-            product.ShipmentDate = pro.ShipmentDate;
-            product.Description = pro.Description;
-            product.TotalPrice = pro.TotalPrice;
-            manufacturerEntities.Products.Add(product);
+            Product prod = new Product()
+            {
+                ProductCategory = pro.ProductCategory,
+                ProductName = pro.ProductName,
+                TotalPrice = pro.TotalPrice,
+                Description = pro.Description,
+                ShipmentDate = pro.ShipmentDate
+            };
+            manufacturerEntities.Products.Add(prod);
             manufacturerEntities.SaveChanges();
 
 
         }
+
+    
 
         public void UpdateProductRecord(ProductModel pro)
         {
             manufacturerEntities.Entry(pro).State = System.Data.Entity.EntityState.Modified;
             manufacturerEntities.SaveChanges();
         }
+
+
+
     }
 }

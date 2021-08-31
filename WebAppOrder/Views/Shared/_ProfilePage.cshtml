@@ -24,31 +24,13 @@
             padding-right: 5px;
         }
 
-        #documents {
-            float: left;
-            width: 40%;
-            padding: 5%;
-        }
-
-        #detailsAndAccountSecurity {
-            float: right;
-            width: 40%;
-            padding: 5%;
-        }
-
-        #documentsList {
-            background: #FFFFFF;
-            width: stretch;
-        }
-
-            #documentslist > p {
-                padding: 10px;
-            }
-
         .topnav {
             overflow: hidden;
             background-color: #333;
-            padding: 20px;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding-top: 20px;
+            padding-bottom: 20px;
             text-align: center;
         }
 
@@ -102,20 +84,6 @@
             color: transparent;
         }
 
-@*
-        a:link, a:visited {
-            background-color: transparent;
-            border: none;
-            color: black;
-            padding: 15px 32px;
-            text-align: center;
-            -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-            display: inline-block;
-        }*@
 
         a:hover, a:active {
             background-color: transparent;
@@ -218,10 +186,30 @@
             a.action-link-header:visited {
                 color: white
             }
-
-        a.action-link:hover {
-            color: black;
+        .action-link-header-right {
         }
+
+        a.action-link-header-right {
+            color: white;
+            background: rgba(0, 0, 0, 0);
+            float: right;
+        }
+
+            a.action-link-header-right:active {
+                color: white
+            }
+
+            a.action-link-header-right:link {
+                color: white
+            }
+
+            a.action-link-header-right:visited {
+                color: white
+            }
+
+            a.action-link-header-right:hover {
+                color: black;
+            }
 
         td {
             text-align: center;
@@ -233,7 +221,7 @@
 
         #wrapper {
             min-height: 100%;
-            padding: 50px;
+            padding: 10%;
         }
 
         .object-info {
@@ -241,27 +229,6 @@
         }
 
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            color:white;
-@*            position: relative;
-*@          <!--background-color: #f9f9f9;-->
-            min-width: 160px;
-@*            box-shadow: 10px 80px 160px 10px #b495c9;
-*@            padding: 19px 16px;
-              padding-top:19px;
-            z-index: 1;
-            bottom:0;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
 
 
 
@@ -273,26 +240,16 @@
     <div data-role="page">
 
         <div class="topnav">
-            <a>@Html.ActionLink("Main Page", "Index", "Default", null, new { @class = "action-link-header" })</a>
-            <a>Store</a>
-            <a>@Html.ActionLink("About Us", "AboutUs", "Default", new { @class = "action-link-header" })</a>
+            @Html.ActionLink("Main Page", "Index", "Default", null, new { @class = "action-link-header" })
+            
+            @Html.ActionLink("Store", "Index", "Product",null , new { @class = "action-link-header" })
 
-            <a style="float: right;" class="action-link-header">
+            @Html.ActionLink("About Us", "AboutUs", "Default", null, new { @class = "action-link-header" })
 
-                @Html.ActionLink("Log Out", "LogOut", "Default", null, new { @class = "action-link-header" })
 
-            </a>
-
-            <div class="dropdown">
-                <a>@Html.ActionLink("Your Account", "Index", "Default", null, new { @class = "action-link-header" })</a>
-                <div class="dropdown-content">
-                    @Html.ActionLink("Order Requests", "GetRecords", "Default", null, new { @class = "action-link-header" })
-                    <hr>
-                    @Html.ActionLink("My Account Info", "My_Account", "Home", null, new { @class = "action-link-header" })
-
-                </div>
-
-            </div>
+            @Html.ActionLink("Order Requests", "GetRecords", "Default", null, new { @class = "action-link-header" })
+            @Html.ActionLink("My Account Info", "My_Account", "Home", null, new { @class = "action-link-header" })
+            @Html.ActionLink("Log Out", "LogOut", "Default", null, new { @class = "action-link-header-right" })
         </div>
 
 

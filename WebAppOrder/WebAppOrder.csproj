@@ -181,6 +181,11 @@
     <Content Include="Views\Default\AboutUs.cshtml" />
     <Content Include="Views\Default\LogOut.cshtml" />
     <Content Include="Views\Home\My_Account.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
     <None Include="Views\Shared\_ProfilePage.cshtml" />
     <Content Include="Views\Shared\res\icons\facebook-f.svg" />
     <Content Include="Views\Shared\res\icons\Instagram.svg" />
@@ -194,6 +199,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +220,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{1A6D1E7A-1265-4360-9933-F97D74C0EB51}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Manufacturer.BL\Manufacturer.BL.csproj">
       <Project>{06760a89-1eb4-4f2b-84f3-6d6313fce19f}</Project>
       <Name>Manufacturer.BL</Name>

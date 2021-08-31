@@ -53,40 +53,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManufactureModel.Context.cs">
+    <Compile Include="ManufacturerModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ManufactureModel.Context.tt</DependentUpon>
+      <DependentUpon>ManufacturerModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ManufactureModel.cs">
+    <Compile Include="ManufacturerModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ManufactureModel.tt</DependentUpon>
+      <DependentUpon>ManufacturerModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ManufactureModel.Designer.cs">
+    <Compile Include="ManufacturerModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ManufactureModel.edmx</DependentUpon>
+      <DependentUpon>ManufacturerModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="ManufacturerProfile.cs">
-      <DependentUpon>ManufactureModel.tt</DependentUpon>
+      <DependentUpon>ManufacturerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>ManufactureModel.tt</DependentUpon>
+      <DependentUpon>ManufacturerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requset.cs">
-      <DependentUpon>ManufactureModel.tt</DependentUpon>
+      <DependentUpon>ManufacturerModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="ManufactureModel.edmx">
+    <EntityDeploy Include="ManufacturerModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ManufactureModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ManufacturerModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ManufactureModel.edmx.diagram">
-      <DependentUpon>ManufactureModel.edmx</DependentUpon>
+    <None Include="ManufacturerModel.edmx.diagram">
+      <DependentUpon>ManufacturerModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -94,15 +94,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ManufactureModel.Context.tt">
+    <Content Include="ManufacturerModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManufactureModel.edmx</DependentUpon>
-      <LastGenOutput>ManufactureModel.Context.cs</LastGenOutput>
+      <DependentUpon>ManufacturerModel.edmx</DependentUpon>
+      <LastGenOutput>ManufacturerModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ManufactureModel.tt">
+    <Content Include="ManufacturerModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ManufactureModel.edmx</DependentUpon>
-      <LastGenOutput>ManufactureModel.cs</LastGenOutput>
+      <DependentUpon>ManufacturerModel.edmx</DependentUpon>
+      <LastGenOutput>ManufacturerModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
