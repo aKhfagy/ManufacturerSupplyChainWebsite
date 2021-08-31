@@ -16,6 +16,14 @@ namespace API.Controllers
     {
         private ManufacturerEntities1 db = new ManufacturerEntities1();
 
+        // GET: Default140
+       // private IOrderRepository iOrderRepository;
+
+        //public Requsets1Controller(IOrderRepository _iOrderRepository)
+        //{
+        //    iOrderRepository = _iOrderRepository;
+        //}
+
         // GET: api/Requsets1
         public IQueryable<Requset> GetRequsets()
         {
