@@ -23,16 +23,12 @@ namespace WebAppOrder.Controllers
             this.manufacturerRepository = manufacturerRepository;
         }
 
-        public ActionResult Index(int id)
+        public ActionResult My_Account()
         {
-            var manufacturerModel = manufacturerRepository.GetManufacturerByID(id);
+            var manufacturerModel = manufacturerRepository.GetManufacturerByID(0);
             return View(manufacturerModel);
         }
 
-        public ActionResult My_Account()
-        {
-            return View();
-        }
 
         public ActionResult Profile_Page()
         {

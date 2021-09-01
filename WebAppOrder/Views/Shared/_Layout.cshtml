@@ -244,12 +244,8 @@
 
         <div class="topnav">
             @Html.ActionLink("Main Page", "Index", "Default", null, new { @class = "action-link-header" })
-            
             @Html.ActionLink("Store", "Index", "Product",null , new { @class = "action-link-header" })
-
             @Html.ActionLink("About Us", "AboutUs", "Default", null, new { @class = "action-link-header" })
-
-
             @Html.ActionLink("Order Requests", "GetRecords", "Default", null, new { @class = "action-link-header" })
             @Html.ActionLink("My Account Info", "My_Account", "Home", null, new { @class = "action-link-header" })
             @Html.ActionLink("Log Out", "LogOut", "Default", null, new { @class = "action-link-header-right" })
@@ -257,13 +253,10 @@
 
 
 
-
-
         <div id="wrapper">
 
             @RenderBody()
         </div>
-
 
 
 
