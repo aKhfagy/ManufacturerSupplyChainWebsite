@@ -60,23 +60,33 @@ namespace Manufacturer.BL
         {
             Product prod = new Product()
             {
+                ProductID = pro.ProductID,
                 ProductCategory = pro.ProductCategory,
                 ProductName = pro.ProductName,
                 TotalPrice = pro.TotalPrice,
                 Description = pro.Description,
                 ShipmentDate = pro.ShipmentDate
             };
+
             manufacturerEntities.Products.Add(prod);
             manufacturerEntities.SaveChanges();
 
 
         }
 
-    
+
 
         public void UpdateProductRecord(ProductModel pro)
         {
-            manufacturerEntities.Entry(pro).State = System.Data.Entity.EntityState.Modified;
+            Product prod = manufacturerEntities.Products.Find(pro.ProductID);
+            prod.ProductID = pro.ProductID;
+            prod.ProductName = pro.ProductName;
+            prod.ProductCategory = pro.ProductCategory;
+            prod.TotalPrice = pro.TotalPrice;
+            prod.Description = pro.Description;
+            prod.ShipmentDate = pro.ShipmentDate;
+
+            manufacturerEntities.Entry(prod).State = System.Data.Entity.EntityState.Modified;
             manufacturerEntities.SaveChanges();
         }
 

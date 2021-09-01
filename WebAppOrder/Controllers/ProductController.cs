@@ -36,7 +36,7 @@ namespace WebAppOrder.Controllers
         public ActionResult Details(int id)
         {
             var getpro = ProductRepo.GetProductByID(id);
-            var prodisplay = new Product();
+            var prodisplay = new ProductModel();
             prodisplay.ProductID = getpro.ProductID;
             prodisplay.ProductName = getpro.ProductName;
             prodisplay.ProductCategory = getpro.ProductCategory;
@@ -50,12 +50,12 @@ namespace WebAppOrder.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View(new Product());
+            return View();
         }
 
         // POST: Product/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection, Product proInsert)
+        public ActionResult Create(FormCollection collection, ProductModel proInsert)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace WebAppOrder.Controllers
                 ProductRepo.InsertProductRecord(addpro);
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception)
             {
                 return View();
             }
@@ -80,7 +80,7 @@ namespace WebAppOrder.Controllers
         public ActionResult Edit(int id)
         {
             var getpro = ProductRepo.GetProductByID(id);
-            var prodisplay = new Product();
+            var prodisplay = new ProductModel();
             prodisplay.ProductID = getpro.ProductID;
             prodisplay.ProductName = getpro.ProductName;
             prodisplay.ProductCategory = getpro.ProductCategory;
@@ -93,14 +93,14 @@ namespace WebAppOrder.Controllers
         // POST: Product/Edit/5
         [HttpPost]
         public ActionResult Edit(ProductModel proupdate, FormCollection collection)
-        {                
+        {
             try
             {
                 // TODO: Add update logic here
                 ProductRepo.UpdateProductRecord(proupdate);
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception)
             {
                 return View();
             }

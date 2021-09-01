@@ -2,16 +2,16 @@
 @model IEnumerable<Manufacturer.Model.OrderModel>
 
 @{
-    ViewBag.Title = "Orders Requests :";
+    ViewBag.Title = "Plcaed Orders";
 
 }
 
 <div data-role="main" class="ui-content">
 
-    <h2 style="padding: 40px; text-align: center;">Records</h2>
+    <h2 style="padding-bottom: 40px; text-align: center;">Accepted orders</h2>
 
-    <table class="table bg-success table-secondary">
-        <thead class="thead-dark">
+    <table class="table">
+        <thead>
 
             <tr>
                 <th>#</th>
@@ -52,9 +52,8 @@
                 <tr>
                     <td>
 
-                        @Html.ActionLink("Details", "Details", new { id = item.ItemID }, new { @class = "btn btn-success" })
-                        @*            @Html.ActionLink("Delete", "Delete", new { id=item.CompanyID })
-                        *@
+                        @Html.ActionLink("Details", "Details", new { id = item.ItemID }, new { @class = "action-link-header-table" })
+                 
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.CompanyID)
@@ -94,9 +93,9 @@
 
     <br>
     <hr>
-    <h2 style="padding:40px; text-align: center;">Active Orders</h2>
-    <table class="table bg-success">
-        <thead class="thead-dark">
+    <h2 style="padding-bottom:40px; text-align: center;">Recieved Orders</h2>
+    <table class="table">
+        <thead>
             <tr>
                 <th>#</th>
                 <th>
@@ -135,9 +134,9 @@
             <tr>
                 <td>
 
-                    @Html.ActionLink("Accept", "Accept", new { id = item.ItemID }) /
-                    @Html.ActionLink("Reject Order", "Reject", new { id = item.ItemID }) /
-                    @Html.ActionLink("Details", "Details", new { id = item.ItemID })
+                    @Html.ActionLink("Accept", "Accept", new { id = item.ItemID }, new { @class = "action-link-header-table" }) |
+                    @Html.ActionLink("Reject Order", "Reject", new { id = item.ItemID }, new { @class = "action-link-header-table" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ItemID }, new { @class = "action-link-header-table" })
 
 
                 </td>
