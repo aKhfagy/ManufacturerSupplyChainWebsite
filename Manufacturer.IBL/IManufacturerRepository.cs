@@ -7,6 +7,9 @@ namespace Manufacturer.IBL
 {
     public interface IManufacturerRepository
     {
-        IEnumerable<ManufacturerModel> GetManufacturerByID(int OrderID);
+        IEnumerable<ManufacturerModel> GetAllManufacturers();
+        IEnumerable<ManufacturerModel> GetManufacturers();
+
+        ManufacturerModel GetManufacturerByID(int OrderID);
     }
 }

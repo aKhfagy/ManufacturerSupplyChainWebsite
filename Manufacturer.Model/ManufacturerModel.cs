@@ -6,6 +6,7 @@ namespace Manufacturer.Model
 {
     public class ManufacturerModel
     {
+
         public int ID { get; set; }
         public byte[] Image { get; set; }
         public string Description { get; set; }

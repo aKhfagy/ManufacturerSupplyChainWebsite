@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,17 @@ using Manufacturer.Model;
 
 namespace Manufacturer.BL
 {
-    public class OrderRepository: IOrderRepository
+    public class OrderRepository : IOrderRepository
     {
-        
+
         private ManufacturerEntities objOrdersEntities;
         public OrderRepository()
         {
             objOrdersEntities = new ManufacturerEntities();
 
-            
+
         }
+
 
         public int AddOrder(OrderModel objOrderModel)
         {
@@ -30,19 +30,15 @@ namespace Manufacturer.BL
                 Company_Name = objOrderModel.Company_Name,
                 ItemID = objOrderModel.ItemID,
                 Item_Name = objOrderModel.Item_Name,
-                Item_Quantity = objOrderModel.Item_Quantity,
-                Shipping_instructions = objOrderModel.Shipping_Instructions,
-                Purchaise_Price = objOrderModel.Purchase_Price,
+                Item_Status = objOrderModel.Item_Status,
+                Shipping_instructions = objOrderModel.Shipping_instructions,
+                Purchaise_Price = objOrderModel.Purchaise_Price,
                 Pick_Up_Date = objOrderModel.Pick_Up_Date,
                 Recurring_Order = objOrderModel.Recurring_Order,
             };
             objOrdersEntities.Requsets.Add(objOrder);
             return objOrdersEntities.SaveChanges();
         }
-
-      
-
-      
 
         public IEnumerable<OrderModel> GetAllOrders()
         {
@@ -52,28 +48,101 @@ namespace Manufacturer.BL
                 {
                     CompanyID = objOrder.CompanyID,
                     Company_Name = objOrder.Company_Name,
-                    ItemID = objOrder.ItemID,
+                    ItemID = (int)objOrder.ItemID,
                     Item_Name = objOrder.Item_Name,
-                    Item_Quantity = (float)objOrder.Item_Quantity,
-                    Shipping_Instructions = objOrder.Shipping_instructions,
-                    Purchase_Price = objOrder.Purchaise_Price,
+                    Item_Status = (float)objOrder.Item_Status,
+                    Shipping_instructions = objOrder.Shipping_instructions,
+                    Purchaise_Price = objOrder.Purchaise_Price,
                     Recurring_Order = objOrder.Recurring_Order,
                     Pick_Up_Date = objOrder.Pick_Up_Date,
 
 
                 }).ToList();
             return listOfOrders;
-         //   return listOfOrders;
         }
 
 
 
-
-        public OrderModel GetOrderByID(int OrderID)
+        public void AcceptedOrder(int orderId)
         {
-            throw new NotImplementedException();
+            Requset order = objOrdersEntities.Requsets.Find(orderId);
+            order.Item_Status = 1;
+
+
+            objOrdersEntities.Entry(order).State = System.Data.Entity.EntityState.Modified;
+            objOrdersEntities.SaveChanges();
         }
 
-      
+
+
+        public OrderModel GetOrderByID(int id)
+        {
+            var listOfOrders =
+                           (from objOrder in objOrdersEntities.Requsets
+                            .Where(objOrder => objOrder.CompanyID == id)
+                            select new OrderModel()
+                            {
+                                CompanyID = objOrder.CompanyID,
+                                Company_Name = objOrder.Company_Name,
+                                ItemID = (int)objOrder.ItemID,
+                                Item_Name = objOrder.Item_Name,
+                                Item_Status = (float)objOrder.Item_Status,
+                                Shipping_instructions = objOrder.Shipping_instructions,
+                                Purchaise_Price = objOrder.Purchaise_Price,
+                                Recurring_Order = objOrder.Recurring_Order,
+                                Pick_Up_Date = objOrder.Pick_Up_Date,
+
+                            }).FirstOrDefault();
+            return listOfOrders;
+        }
+
+        /* public OrderModel AccepttOrderByID(int id)
+         {
+             var listOfOrders =
+                            (from objOrder in objOrdersEntities.Requsets
+                             .Where(objOrder => objOrder.ItemID == id)
+                             .Where(  )
+                             select new OrderModel()
+                             {
+                                 CompanyID = objOrder.CompanyID,
+                                 Company_Name = objOrder.Company_Name,
+                                 ItemID = (int)objOrder.ItemID,
+                                 Item_Name = objOrder.Item_Name,
+                                 Item_Status = (float)objOrder.Item_Status,
+                                 Shipping_Instructions = objOrder.Shipping_instructions,
+                                 Purchase_Price = (float)objOrder.Purchase_Price,
+                                 Recurring_Order = objOrder.Recurring_Order,
+                                 Pick_Up_Date = objOrder.Pick_Up_Date,
+                             }).FirstOrDefault();
+             return listOfOrders;
+         }
+ */
+
+        public List<OrderModel> GetOrders()
+        {
+            var listOfOrders =
+               (from objOrder in objOrdersEntities.Requsets
+                select new OrderModel()
+                {
+                    CompanyID = objOrder.CompanyID,
+                    Company_Name = objOrder.Company_Name,
+                    ItemID = (int)objOrder.ItemID,
+                    Item_Name = objOrder.Item_Name,
+                    Item_Status = (float)objOrder.Item_Status,
+                    Shipping_instructions = objOrder.Shipping_instructions,
+                    Purchaise_Price = (decimal)objOrder.Purchaise_Price,
+                    Recurring_Order = objOrder.Recurring_Order,
+                    Pick_Up_Date = objOrder.Pick_Up_Date,
+                    Status = objOrder.Status
+
+
+                }).ToList();
+            return listOfOrders;
+        }
+
+
+
     }
+
 }
+

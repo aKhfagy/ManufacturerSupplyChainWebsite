@@ -1,0 +1,57 @@
+﻿@model Manufacturer.Model.ProductModel
+    @{
+        ViewBag.Title = "Filter";
+    }
+
+    <h2>Filter</h2>
+
+    <hr />
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductCategory)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductCategory)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalPrice)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShipmentDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShipmentDate)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>

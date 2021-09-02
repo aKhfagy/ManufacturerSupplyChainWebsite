@@ -1,0 +1,186 @@
+﻿
+@model IEnumerable<Manufacturer.Model.OrderModel>
+
+@{
+    ViewBag.Title = "Plcaed Orders";
+
+}
+
+<div data-role="main" class="ui-content">
+
+    <h2 style="padding-bottom: 40px; text-align: center;">Accepted orders</h2>
+
+
+    <table class="table">
+        <thead>
+
+            <tr>
+                <th>#</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Company_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Name)
+
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shipping_instructions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pick_Up_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Purchaise_Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Recurring_Order)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                @if (item.Item_Status == 1)
+                {
+
+                    <td>
+
+                        @Html.ActionLink("Details", "Details", new { id = item.ItemID }, new { @class = "action-link-header-table" })
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Company_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemID)
+                    </td>
+
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.Item_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item_Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Shipping_instructions)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pick_Up_Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Purchaise_Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recurring_Order)
+                    </td>
+                }
+            </tr>
+
+            }
+        </tbody>
+
+    </table>
+
+
+    <br>
+    <hr>
+    <h2 style="padding-bottom:40px; text-align: center;">Active Orders</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Company_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item_Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shipping_instructions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pick_Up_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Purchaise_Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Recurring_Order)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                @if (item.Item_Status == 0)
+                {
+                    <td>
+
+                        @Html.ActionLink("Accept", "Accept", new { id = item.CompanyID }, new { @class = "action-link-header-table" }) |
+                        @Html.ActionLink("Reject Order", "Reject", new { id = item.CompanyID }, new { @class = "action-link-header-table" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.CompanyID }, new { @class = "action-link-header-table" })
+
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Company_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item_Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Shipping_instructions)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pick_Up_Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Purchaise_Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recurring_Order)
+                    </td>
+                }
+            </tr>
+            }
+        </tbody>
+
+    </table>
+
+</div>

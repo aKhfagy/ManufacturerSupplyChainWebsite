@@ -1,0 +1,338 @@
+﻿@{ ViewBag.Title = "Index"; }
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        html, body {
+            background: #CFCFCF;
+            min-height: 100%;
+            margin: 0;
+        }
+
+        .icon {
+            height: 15px;
+            width: 15px;
+            padding-top: 20px;
+            padding-right: 5px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #04AA6D;
+                    color: white;
+                }
+
+        [data-role=page] {
+            height: 100% !important;
+            position: relative !important;
+        }
+
+        [data-role=footer] {
+            bottom: 0;
+            padding: 20px;
+            position: absolute !important;
+            top: auto !important;
+            width: 100%;
+        }
+
+
+        #header {
+            background-color: #F5F5F5;
+            font-size: 30px;
+        }
+
+        a.one:link {
+            color: black;
+        }
+
+        a.one:visited {
+            color: #0000ff;
+        }
+
+        a.one:hover {
+            color: transparent;
+        }
+
+
+        a:hover, a:active {
+            background-color: transparent;
+        }
+
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 2px solid black;
+            text-align: left;
+        }
+
+        tr:hover {
+            background-color: #b495c9;
+        }
+
+
+        .icon {
+            height: 15px;
+            width: 15px;
+            padding-top: 20px;
+            padding-right: 5px;
+        }
+
+        #footer {
+            background-color: #333;
+            width: 100%;
+            padding: 20px;
+        }
+
+            #footer > p {
+                color: #F5F5F5;
+            }
+
+            #footer > a {
+                color: #48A14D;
+            }
+
+
+        #documents {
+            float: left;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #detailsAndAccountSecurity {
+            float: right;
+            width: 40%;
+            padding: 5%;
+        }
+
+        #documentsList {
+            background: #FFFFFF;
+            width: stretch;
+        }
+
+            #documentsList > p {
+                padding: 10px;
+            }
+
+        .action-link {
+        }
+
+        a.action-link {
+            color: black;
+        }
+
+            a.action-link:active {
+                color: black
+            }
+
+            a.action-link:link {
+                color: black
+            }
+
+            a.action-link:visited {
+                color: black
+            }
+
+        .action-link-header {
+        }
+
+        a.action-link-header {
+            color: white;
+            font-weight: normal;
+            background: rgba(0, 0, 0, 0);
+        }
+
+            a.action-link-header:active {
+                color: white
+            }
+
+            a.action-link-header:link {
+                color: white
+            }
+
+            a.action-link-header:visited {
+                color: white
+            }
+        .action-link-header-right {
+        }
+
+        a.action-link-header-right {
+            color: white;
+            font-weight: normal;
+            background: rgba(0, 0, 0, 0);
+            float: right;
+        }
+
+            a.action-link-header-right:active {
+                color: white
+            }
+
+            a.action-link-header-right:link {
+                color: white
+            }
+
+            a.action-link-header-right:visited {
+                color: white
+            }
+
+            a.action-link-header-right:hover {
+                color: black;
+            }        
+            .action-link-header-table {
+        
+            }
+
+        a.action-link-header-table {
+
+            color: white;
+            font-weight: normal;
+            background: rgba(0, 0, 0, 0);
+        }
+
+            a.action-link-header-table:active {
+                color: white
+            }
+
+            a.action-link-header-table:link {
+                color: white
+            }
+
+            a.action-link-header-table:visited {
+                color: white
+            }
+
+            a.action-link-header-table:hover {
+                color: black;
+            }
+
+        td {
+            text-align: center;
+            color: white;
+        }
+
+        th {
+            text-align: center;
+            color: white;
+            font-weight: normal;
+        }
+
+        td:hover {
+            background-color: #565656;
+        }
+
+        th:hover {
+            background-color: #565656;
+        }
+
+        #wrapper {
+            min-height: 100%;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .object-info {
+            padding: 40px;
+        }
+
+        thead {
+            background-color: #777;
+          
+        }
+
+
+            thead:hover {
+                background-color: #777;
+            }
+
+        tbody {
+            background-color: #A8A8A8;
+        }
+
+            tbody:hover {
+                background-color: #A8A8A8;
+            }    
+            tbody:active {
+                background-color: #A8A8A8;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                color: #414141;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div data-role="page">
+
+        <div class="topnav">
+            @Html.ActionLink("Main Page", "Index", "Default", null, new { @class = "action-link-header" })
+            @Html.ActionLink("Store", "Index", "Product",null , new { @class = "action-link-header" })
+            @Html.ActionLink("About Us", "AboutUs", "Default", null, new { @class = "action-link-header" })
+            @Html.ActionLink("Order Requests", "GetRecords", "Default", null, new { @class = "action-link-header" })
+            @Html.ActionLink("My Account Info", "My_Account", "Home", null, new { @class = "action-link-header" })
+            @Html.ActionLink("Log Out", "LogOut", "Default", null, new { @class = "action-link-header-right" })
+        </div>
+
+
+
+        <div id="wrapper">
+
+            @RenderBody()
+        </div>
+
+
+
+
+        <footer id="footer" class="footer">
+
+            <p>Contact Info</p>
+            <img src="~/Views/Shared/res/icons/Instagram.svg" />
+            <img src="~/Views/Shared/res/icons/linkedin.svg" />
+            <img src="~/Views/Shared/res/icons/twitter.svg" />
+            <img src="~/Views/Shared/res/icons/facebook-f.svg" />
+            <br>
+            <p id="ourEmail">xyz@xyz.com</p>
+            <p id="ourPhoneNumber">(+20) XXXXXXXXXX</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+

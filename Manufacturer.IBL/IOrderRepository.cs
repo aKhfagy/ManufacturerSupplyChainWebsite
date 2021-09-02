@@ -12,9 +12,8 @@ namespace Manufacturer.IBL
     public interface IOrderRepository
     {
         IEnumerable<OrderModel> GetAllOrders();
-
-
         int AddOrder(OrderModel objOrderModel);
         OrderModel GetOrderByID(int OrderID);
+        void AcceptedOrder(int orderId);
     }
 }

@@ -47,8 +47,9 @@ namespace WebAppOrder.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-                kernel.Bind<IOrderRepository>().To<OrderRepository>();
                 kernel.Bind<IManufacturerRepository>().To<ManufacturerRepository>();
+                kernel.Bind<IOrderRepository>().To<OrderRepository>();
+
                 RegisterServices(kernel);
                 return kernel;
             }
@@ -65,6 +66,7 @@ namespace WebAppOrder.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+           // kernel.Bind<IOrderRepository>().To<OrderRepository>().InRequestScope();
         }        
     }
 }

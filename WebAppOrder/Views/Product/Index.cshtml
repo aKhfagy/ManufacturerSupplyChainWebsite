@@ -1,0 +1,70 @@
+﻿
+@model IEnumerable<Manufacturer.Model.ProductModel>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h1 style="text-align: center;">Products</h1>
+
+<style>
+    .search-items {
+        margin: 12px;
+        background-color: white;
+        color: #414141;
+    }
+</style>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipmentDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "action-link-header-table" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductID }, new { @class = "action-link-header-table" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductID }, new { @class = "action-link-header-table" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductCategory)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipmentDate)
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
