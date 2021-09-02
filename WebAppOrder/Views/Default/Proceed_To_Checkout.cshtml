@@ -159,7 +159,7 @@
                 <label>
                     <input type="checkbox" checked="checked" name="sameadr"> Set to as default Shipping address
                 </label>
-                @*<input type="submit" value="Place Order" class="btn">*@<b>@Html.ActionLink("Place Order", "Cart", new { id = Model.ItemID })</b>
+                @*<input type="submit" value="Place Order" class="btn">*@<b>@Html.ActionLink("Place Order", "Cart", new { id = Model.CompanyID })</b>
             </form>
         </div>
     </div>
@@ -181,9 +181,9 @@
             <hr />
             <p>Pick Up Date <span class="price" style="color:black"><b>@Model.Pick_Up_Date</b></span></p>
             <hr />
-            <p>Product Quantity <span class="price" style="color:black"><b>@Model.Item_Quantity</b></span></p>
+            <p>Product Quantity <span class="price" style="color:black"><b>@Model.Item_Status</b></span></p>
             <hr>
-            <p>Total Price <span class="price" style="color:black"><b>@Model.Purchase_Price </b></span></p>
+            <p>Total Price <span class="price" style="color:black"><b>@Model.Purchaise_Price </b></span></p>
         </div>
     </div>
 </div>

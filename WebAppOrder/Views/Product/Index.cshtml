@@ -17,29 +17,30 @@
     }
 </style>
 
+<div style="padding-right: 25%;">
 
-<form style="text-align: center;">
-    <div style="width: 20%; float:right; margin: 10px;">
-        <input type="text" id="input-date" class="search-items" placeholder="Date" />
+    <form>
+        <div style="width: 20%; float:right; margin: 10px;">
+            <input type="text" id="input-date" class="search-items" placeholder="Date" />
 
-    </div>
-    <div style="width: 20%; float: right; margin: 10px;">
+        </div>
+        <div style="width: 20%; float: right; margin: 10px;">
 
-        <input type="text" id="input-category" class="search-items" placeholder="Category" />
-    </div>
-    <div style="width: 20%; float: right; margin: 10px;">
+            <input type="text" id="input-category" class="search-items" placeholder="Category" />
+        </div>
 
-        <input type="text" id="input-name" class="search-items" placeholder="Name" />
-    </div>
-    <div style="width: 10%; float: right; margin: 10px;">
+        <div style="width: 10%; float: right; margin: 10px;">
 
-        <button id="filter-products" style="font-size: 12px;">Filter</button>
-    </div>
+            <button id="filter-products" style="font-size: 12px;">
+                @Html.ActionLink("Search", "Filter")
+            </button>
+        </div>
 
-    <button style="font-size: 12px; width: 10%; float: right; margin: 10px; margin-top: 15px;">
-        @Html.ActionLink("Create New", "Create")
-    </button>
-</form>
+        <button style="font-size: 12px; width: 10%; float: right; margin: 10px; margin-top: 16px;">
+            @Html.ActionLink("Create New", "Create")
+        </button>
+    </form>
+</div>
 
 <table class="table">
     <thead>

@@ -14,5 +14,6 @@ namespace Manufacturer.IBL
         IEnumerable<OrderModel> GetAllOrders();
         int AddOrder(OrderModel objOrderModel);
         OrderModel GetOrderByID(int OrderID);
+        void AcceptedOrder(int orderId);
     }
 }

@@ -43,19 +43,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Item_Quantity)
+            @Html.DisplayNameFor(model => model.Item_Status)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Item_Quantity)
+            @Html.DisplayFor(model => model.Item_Status)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Shipping_Instructions)
+            @Html.DisplayNameFor(model => model.Shipping_instructions)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Shipping_Instructions)
+            @Html.DisplayFor(model => model.Shipping_instructions)
         </dd>
 
         <dt>
@@ -67,11 +67,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Purchase_Price)
+            @Html.DisplayNameFor(model => model.Purchaise_Price)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Purchase_Price)
+            @Html.DisplayFor(model => model.Purchaise_Price)
         </dd>
 
         <dt>
@@ -85,6 +85,6 @@
     </dl>
 </div>
 <p style="text-align: center;">
-    @Html.ActionLink("Proceed to Checkout", "Proceed_To_Checkout", new { id = Model.ItemID }) |
+    @Html.ActionLink("Proceed to Checkout", "Proceed_To_Checkout", new { id = Model.CompanyID }) |
     @Html.ActionLink("Back to List", "GetRecords")
 </p>

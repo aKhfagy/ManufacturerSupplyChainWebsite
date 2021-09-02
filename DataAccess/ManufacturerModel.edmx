@@ -36,11 +36,12 @@
           <Property Name="Company_Name" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="ItemID" Type="int" Nullable="false" />
           <Property Name="Item_Name" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Item_Quantity" Type="float" Nullable="false" />
+          <Property Name="Status" Type="float" Nullable="false" />
           <Property Name="Pick_Up_Date" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Purchaise_Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Shipping_instructions" Type="nchar" MaxLength="10" />
           <Property Name="Recurring_Order" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Item_Status" Type="float" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ManufacturerModelStoreContainer">
           <EntitySet Name="ManufacturerProfile" EntityType="Self.ManufacturerProfile" Schema="dbo" store:Type="Tables" />
@@ -83,11 +84,12 @@
           <Property Name="Company_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="ItemID" Type="Int32" Nullable="false" />
           <Property Name="Item_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Item_Quantity" Type="Double" Nullable="false" />
+          <Property Name="Status" Type="Double" Nullable="false" />
           <Property Name="Pick_Up_Date" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Purchaise_Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Shipping_instructions" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Recurring_Order" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Item_Status" Type="Double" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ManufacturerEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ManufacturerProfiles" EntityType="Self.ManufacturerProfile" />
@@ -132,11 +134,12 @@
                 <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
                 <ScalarProperty Name="ItemID" ColumnName="ItemID" />
                 <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
-                <ScalarProperty Name="Item_Quantity" ColumnName="Item_Quantity" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Pick_Up_Date" ColumnName="Pick_Up_Date" />
                 <ScalarProperty Name="Purchaise_Price" ColumnName="Purchaise_Price" />
                 <ScalarProperty Name="Shipping_instructions" ColumnName="Shipping_instructions" />
                 <ScalarProperty Name="Recurring_Order" ColumnName="Recurring_Order" />
+                <ScalarProperty Name="Item_Status" ColumnName="Item_Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

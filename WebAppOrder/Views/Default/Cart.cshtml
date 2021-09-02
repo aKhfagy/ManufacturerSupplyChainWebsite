@@ -31,22 +31,22 @@
             <div class="layout-inline row">
 
                 <div class="col col-pro layout-inline">
-                    <p>@Model.Item_Name</p>
+                    <p>@Model.ItemID</p>
                 </div>
 
                 <div class="col col-price align-center ">
-                    <p>@Model.Purchase_Price</p>
+                    <p>@Model.Purchaise_Price</p>
                 </div>
 
                 <div class="col col-qty  align-center ">
-                    <p>@Model.Item_Quantity</p>
+                    <p>@Model.Item_Status</p>
                 </div>
 
                 <div class="col col-vat">
                     <p>£0.00</p>
                 </div>
                 <div class="col col-total col-numeric">
-                    <p>@Model.Purchase_Price </p>
+                    <p>@Model.Purchaise_Price </p>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
                 <div class="row layout-inline">
                     <div class="col">
                         <p>
-                            Total : @Model.Purchase_Price
+                            Total : @Model.Purchaise_Price
                         </p>
 
 
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        @Html.ActionLink("Return To Orders List", "GetRecords", new { id = Model.ItemID })
+        @Html.ActionLink("Return To Orders List", "GetRecords", new { id = Model.CompanyID })
     </div>
 </div>
 

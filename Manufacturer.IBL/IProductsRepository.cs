@@ -16,6 +16,8 @@ namespace Manufacturer.IBL
         void UpdateProductRecord(ProductModel pro);
         void DeleteProductRecord(int proID);
         ProductModel GetProductByID(int proID);
-        
+        ProductModel GetProductFilter(string category, DateTime shipmentdate);
+
+
     }
 }

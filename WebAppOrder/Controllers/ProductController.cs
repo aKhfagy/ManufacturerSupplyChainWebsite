@@ -25,7 +25,18 @@ namespace WebAppOrder.Controllers
             var proList = ProductRepo.getProduct().ToList();
             return View(proList);
         }
-
+        public ActionResult Filter(string category, DateTime shipmentdate)
+        {
+            var getpro = ProductRepo.GetProductFilter(category, shipmentdate);
+            var prodisplay = new ProductModel();
+            prodisplay.ProductID = getpro.ProductID;
+            prodisplay.ProductName = getpro.ProductName;
+            prodisplay.ProductCategory = getpro.ProductCategory;
+            prodisplay.Description = getpro.Description;
+            prodisplay.TotalPrice = getpro.TotalPrice;
+            prodisplay.ShipmentDate = getpro.ShipmentDate;
+            return View(prodisplay);
+        }
         public ActionResult ProductDetails()
         {
             var proList = ProductRepo.getProduct().ToList();

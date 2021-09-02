@@ -33,11 +33,11 @@ namespace WebAppOrder.Controllers
                 Company_Name = "Lenovo",
                 ItemID = 2,
                 Item_Name = "Bag",
-                Item_Quantity = 25,
+                Item_Status = 25,
                 Pick_Up_Date = "25/3/2020",
-                Purchase_Price = 200,
+                Purchaise_Price = 200,
                 Recurring_Order = "no",
-                Shipping_Instructions = " We would the Shippment to arrive before [22/8/2022] "
+                Shipping_instructions = " We would the Shippment to arrive before [22/8/2022] "
             };
 
             int result = iOrderRepository.AddOrder(objOrderModel);
@@ -99,7 +99,10 @@ namespace WebAppOrder.Controllers
 
         public ActionResult Cart(int id)
         {
+            iOrderRepository.AcceptedOrder(id);
+
             var myorder = iOrderRepository.GetOrderByID(id);
+
             return View(myorder);
         }
 

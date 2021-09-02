@@ -56,6 +56,23 @@ namespace Manufacturer.BL
             return product_.First();
         }
 
+        public ProductModel GetProductFilter(string category, DateTime shipmentdate)
+        {
+            var product_ =
+               from product in manufacturerEntities.Products
+               where product.ProductCategory == category && product.ShipmentDate == shipmentdate
+               select new ProductModel
+               {
+                   ProductID = product.ProductID,
+                   ProductName = product.ProductName,
+                   ProductCategory = product.ProductCategory,
+                   TotalPrice = product.TotalPrice,
+                   Description = product.Description,
+                   ShipmentDate = product.ShipmentDate
+               };
+            return product_.First();
+        }
+
         public void InsertProductRecord(ProductModel pro)
         {
             Product prod = new Product()
